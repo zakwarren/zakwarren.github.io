@@ -1,0 +1,111 @@
+{
+    "name": "Skills",
+    "size": 10000,
+    "children": [
+        {
+            "name": "Web",
+            "size": 5000,
+            "children": [
+                {"name": "HTML", "size": 5731},
+                {"name": "CSS", "size": 5262},
+                {
+                    "name": "Javascript",
+                    "size": 2500,
+                    "children": [
+                        {"name": "D3", "size": 2938},
+                        {"name": "React", "size": 3812},
+                        {"name": "Node.js", "size": 6714},
+                        {"name": "Express", "size": 3743},
+                        {"name": "Stripe.js", "size": 621}
+                    ]
+                },
+                {
+                    "name": "Python",
+                    "size": 2500,
+                    "children": [
+                        {"name": "Django", "size": 7840}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Analytics",
+            "size": 5000,
+            "children": [
+                {
+                    "name": "Python",
+                    "size": 2500,
+                    "children": [
+                        {"name": "Tensorflow", "size": 531},
+                        {"name": "Pandas", "size": 3814},
+                        {"name": "Matplotlib", "size": 3814},
+                        {"name": "OpenCSV", "size": 3481}
+                    ]
+                },
+                {
+                    "name": "SQL",
+                    "size": 2500,
+                    "children": [
+                        {"name": "SSRS", "size": 5271},
+                        {"name": "SSAS", "size": 4882},
+                        {"name": "T-SQL", "size": 7091},
+                        {"name": "Data Warehouse", "size": 5848}
+                    ]
+                },
+                {"name": "Excel", "size": 6500},
+                {"name": "WebFOCUS", "size": 621},
+                {"name": "SAP", "size": 621}
+            ]
+        },
+        {
+            "name": "Applications",
+            "size": 5000,
+            "children": [
+                {
+                    "name": "Python",
+                    "size": 2500,
+                    "children": [
+                        {"name": "Selenium", "size": 3534},
+                        {"name": "BeautifulSoup", "size": 3416},
+                        {"name": "Docx", "size": 3814},
+                        {"name": "Tweepy", "size": 5914},
+                    ]
+                },
+                {
+                    "name": "C#",
+                    "children": [
+                        {"name": "Unity", "size": 7074}
+                    ]
+                },
+                {"name": "Git", "size": 4068}
+            ]
+        },
+        {
+            "name": "Databases",
+            "size": 5000,
+            "children": [
+                {"name": "SSMS", "size": 9072},
+                {"name": "T-SQL", "size": 7091},
+                {"name": "MySQL", "size": 4812},
+                {"name": "Postgresql", "size": 3712},
+                {"name": "SQLite", "size": 2649},
+                {"name": "NoSQL", "size": 5821},
+                {"name": "GraphQL", "size": 5821}
+            ]
+        },
+        {
+            "name": "Servers",
+            "size": 5000,
+            "children": [
+                {"name": "Windows", "size": 6500},
+                {"name": "Linux", "size": 6500},
+                {"name": "Apache", "size": 3426},
+                {"name": "Gunicorn", "size": 3426},
+                {"name": "CLI", "size": 5982},
+                {"name": "Nmap", "size": 5782},
+                {"name": "cmd", "size": 5782},
+                {"name": "PowerShell", "size": 425}
+            ]
+        }
+    ]
+}

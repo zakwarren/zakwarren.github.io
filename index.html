@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zak!</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+        crossorigin="anonymous"
+    />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+        :root {
+            --main-black: #000000;
+            --main-white: #f0f0f0;
+            --main-red: #de3f53;
+            --main-blue: #45567d;
+            --main-gray: #303841;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            scroll-behavior: smooth;
+            line-height: 1.4;
+            font-size: 1.2vw;
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+            padding: 1vw;
+            font-size: 3vw;
+        }
+
+        p {
+            margin: 0;
+            padding: 1vw;
+            font-size: 1.5vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--main-white);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--main-red);
+            box-shadow: 0 0.2vw 0 rgba(0, 0, 0, 0.4);
+            z-index: 10;
+        }
+
+        .nav-list {
+            display: flex;
+            margin: 0 0 0 1vw;
+            padding: 0;
+            list-style: none;
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                justify-content: center;
+            }
+
+            .nav-list {
+                margin: 0 0.1vw;
+            }
+        }
+
+        .nav-list a {
+            display: block;
+            padding: 1vw;
+            text-decoration: none;
+            color: var(--main-white);
+        }
+
+        .nav-list a:hover {
+            background: var(--main-blue);
+        }
+
+        .welcome-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--main-black);
+            background-image: linear-gradient(
+                180deg,
+                var(--main-gray) 0%,
+                var(--main-black) 100%
+            );
+        }
+
+        .welcome-section__heading {
+            margin: 1.5vh 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 5vw;
+            color: var(--main-white);
+        }
+
+        .welcome-section__paragraph {
+            margin: 1vh 0;
+            font-size: 2vw;
+            font-weight: 200;
+            font-style: italic;
+            color: var(--main-red);
+        }
+
+        .about-me {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: center; 
+        }
+
+        .about-section,
+        .skills-section {
+            margin: 0;
+            padding: 1vw;
+            width: 50%;
+            background-color: var(--main-black);
+            color: var(--main-white);
+        }
+
+        @media (max-width: 600px) {
+            .about-me {
+                flex-direction: column;
+            }
+
+            .about-section,
+            .skills-section {
+                width: 100%;
+            }
+        }
+
+        .node circle {
+            cursor: pointer;
+            stroke: gold;
+            stroke-width: 0.15vw;
+        }
+
+        .node text {
+            font-size: 1vw;
+            pointer-events: none;
+            text-anchor: middle;
+            transform: translate(0vw, 1.2vw);
+        }
+
+        line.link {
+            fill: none;
+            stroke: gold;
+            stroke-width: 0.15vw;
+        }
+
+        .projects-section {
+            padding: 1vw 0.1vw 4vw 0.1vw;
+            text-align: center;
+            background-color: var(--main-blue);
+            background-image: linear-gradient(
+                0deg,
+                var(--main-gray) 0%,
+                var(--main-black) 100%
+            );
+        }
+
+        .projects-section__heading {
+            color: var(--main-white);
+            max-width: 25%;
+            margin: 0 auto 2.5vw auto;
+            border-bottom: 0.2vw solid var(--main-white);
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 80%;
+            margin: 0 auto;
+            margin-bottom: 2vw;
+        }
+
+        .project-grid__tile {
+            width: 30%;
+        }
+
+        @media (max-width: 600px) {
+            .projects-section {
+                padding: 0.6vw 0.1vw;
+            }
+
+            .projects-grid {
+                flex-direction: column;
+                align-content: space-between;
+            }
+
+            .project-grid__tile {
+                margin: 1vw;
+                width: 100%;
+            }
+        }
+
+        .project {
+            background: var(--main-red);
+            box-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
+            border-radius: 0.2vw;
+        }
+
+        .project-code {
+            color: var(--main-red);
+            transition: color 0.3s ease-out;
+        }
+
+        .project:hover .project-code {
+            color: var(--main-white);
+        }
+
+        .project-image {
+            height: calc(100% - 2vw);
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .project-title {
+            padding: 0.2vw 0.5vw;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5vw 1vw;
+            border-radius: 0.2vw;
+        }
+
+        .btn-show-all {
+            background: var(--main-red);
+            transition: background 0.3s ease-out;
+        }
+
+        .btn-show-all:hover {
+            background: var(--main-red);
+        }
+
+        .btn-show-all:hover > i {
+            transform: translateX(2px);
+        }
+
+        .btn-show-all > i {
+            margin-left: 0.1vw;
+            transform: translateX(0);
+            transition: transform 0.3s ease-out;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1vw;
+            background: var(--main-gray);
+            border-top: 0.4vw solid var(--main-red);
+        }
+
+        footer > p {
+            margin: 0.2vw;
+            padding: 0;
+            color: var(--main-white);
+        }
+
+        footer i {
+            vertical-align: middle;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header id="page-header" class="page-header">
+        <nav id="navbar" class="nav">
+            <ul class="nav-list">
+                <li class="nav-list__item"><a href="#about">About</a></li>
+                <li class="nav-list__item"><a href="#skills">Skills</a></li>
+                <li class="nav-list__item"><a href="#projects">Projects</a></li>
+                <li class="nav-list__item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section id="welcome" class="welcome-section">
+            <h1 class="welcome-section__heading">Zak Warren</h1>
+            <p class="welcome-section__paragraph">Developer | Scientist | Explorer</p>
+        </section>
+    </header>
+
+    <section id="adoutme" class="about-me">
+        <div id="about" class="about-section">
+            <h2 class="about-section__heading">About Me</h2>
+            <p class="about-section__paragraph">
+                Hi, I'm Zak! I love exploring new places, new ideas and new projects.
+                I have a passion for solving problems and creating new things.
+                Check out my latest projects and see if they spark your imagination.
+            </p>
+        </div>
+
+        <div id="skills" class="skills-section">
+            <h2 class="skills-section__heading">Skills</h2>
+            <div id="skills-graph" class="skills-section__container"></div>
+            <p class="skills-section__paragraph">Click on a node to collapse or expand that section</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="projects-section__heading">My Projects</h2>
+
+        <div class="projects-grid">
+            <a class="project project-grid__tile" href="https://github.com/zakwarren/activitiesclub" target="_blank">
+                <p class="project-title">
+                    <span class="project-code">&lt;</span>
+                    Activities Club Website
+                    <span class="project-code">&#47;&gt;</span>
+                </p>
+                <img class="project-image" src="images/activitiesclub.jpg" alt="Activities Club Website" />
+            </a>
+            <a class="project project-grid__tile" href="https://www.sharemygame.com/share/484b2062-4881-47c1-bb65-efab8a04e49b" target="_blank">
+                <p class="project-title">
+                    <span class="project-code">&lt;</span>
+                    Albie Adventures Game
+                    <span class="project-code">&#47;&gt;</span>
+                </p>
+                <img class="project-image" src="images/albieadventures.png" alt="Albie Adventures Game" />
+            </a>
+            <a class="project project-grid__tile" href="https://github.com/zakwarren/cashlesscards" target="_blank">
+                <p class="project-title">
+                    <span class="project-code">&lt;</span>
+                    Cashless Cards System
+                    <span class="project-code">&#47;&gt;</span>
+                </p>
+                <img class="project-image" src="images/cashlesscards.jpg" alt="Cashless Cards System" />
+            </a>
+        </div>
+
+        <a class="btn btn-show-all" href="https://github.com/zakwarren" target="_blank">
+            Show all <i class="fas fa-chevron-right"></i>
+        </a>
+    </section>
+
+    <footer id="contact" class="contact-footer">
+        <div class="contact-footer__links">
+            <a
+                id="profile-link__github"
+                class="btn contact-details"
+                href="https://github.com/zakwarren"
+                target="_blank"
+            >
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a class="btn contact-details" href="mailto:example@example.com">
+                <i class="fas fa-at"></i> Email
+            </a>
+        </div>
+        <p>&copy; Zak Warren 2019</p>
+    </footer>
+
+    <script>
+        const dataset = {
+            "name": "Skills",
+            "size": 10000,
+            "children": [
+                {
+                    "name": "Web",
+                    "size": 5000,
+                    "children": [
+                        {"name": "HTML", "size": 5731},
+                        {"name": "CSS", "size": 5262},
+                        {
+                            "name": "Javascript",
+                            "size": 2500,
+                            "children": [
+                                {"name": "D3", "size": 2938},
+                                {"name": "React", "size": 3812},
+                                {"name": "Node.js", "size": 6714},
+                                {"name": "Express", "size": 3743},
+                                {"name": "Stripe.js", "size": 621}
+                            ]
+                        },
+                        {
+                            "name": "Python",
+                            "size": 2500,
+                            "children": [
+                                {"name": "Django", "size": 7840}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Analytics",
+                    "size": 5000,
+                    "children": [
+                        {
+                            "name": "Python",
+                            "size": 2500,
+                            "children": [
+                                {"name": "Tensorflow", "size": 531},
+                                {"name": "Pandas", "size": 3814},
+                                {"name": "Matplotlib", "size": 3814},
+                                {"name": "OpenCSV", "size": 3481}
+                            ]
+                        },
+                        {
+                            "name": "SQL",
+                            "size": 2500,
+                            "children": [
+                                {"name": "SSRS", "size": 5271},
+                                {"name": "SSAS", "size": 4882},
+                                {"name": "T-SQL", "size": 7091},
+                                {"name": "Data Warehouse", "size": 5848}
+                            ]
+                        },
+                        {"name": "Excel", "size": 6500},
+                        {"name": "WebFOCUS", "size": 621},
+                        {"name": "SAP", "size": 621}
+                    ]
+                },
+                {
+                    "name": "Applications",
+                    "size": 5000,
+                    "children": [
+                        {
+                            "name": "Python",
+                            "size": 2500,
+                            "children": [
+                                {"name": "Selenium", "size": 3534},
+                                {"name": "BeautifulSoup", "size": 3416},
+                                {"name": "Docx", "size": 3814},
+                                {"name": "Tweepy", "size": 5914},
+                            ]
+                        },
+                        {
+                            "name": "C#",
+                            "children": [
+                                {"name": "Unity", "size": 7074}
+                            ]
+                        },
+                        {"name": "Git", "size": 4068}
+                    ]
+                },
+                {
+                    "name": "Databases",
+                    "size": 5000,
+                    "children": [
+                        {"name": "SSMS", "size": 9072},
+                        {"name": "T-SQL", "size": 7091},
+                        {"name": "MySQL", "size": 4812},
+                        {"name": "Postgresql", "size": 3712},
+                        {"name": "SQLite", "size": 2649},
+                        {"name": "NoSQL", "size": 5821},
+                        {"name": "GraphQL", "size": 5821}
+                    ]
+                },
+                {
+                    "name": "Servers",
+                    "size": 5000,
+                    "children": [
+                        {"name": "Windows", "size": 6500},
+                        {"name": "Linux", "size": 6500},
+                        {"name": "Apache", "size": 3426},
+                        {"name": "Gunicorn", "size": 3426},
+                        {"name": "CLI", "size": 5982},
+                        {"name": "Nmap", "size": 5782},
+                        {"name": "cmd", "size": 5782},
+                        {"name": "PowerShell", "size": 425}
+                    ]
+                }
+            ]
+        }
+
+        const width = 800;
+        const height = 600;
+        const svg = d3.select("#skills-graph")
+                        .append("svg")
+                    // .attr("width", width)
+                    // .attr("height", height);
+                        .attr("preserveAspectRatio", "xMinYMin meet")
+                        .attr("viewBox", "0 0 960 600");
+
+        let link = svg.selectAll(".link");
+        let node = svg.selectAll(".node");
+    
+        const update = () => {
+            let nodes = flatten(dataset);
+            let links = d3.layout.tree().links(nodes);
+    
+            force.nodes(nodes)
+                .links(links)
+                .start();
+    
+            link = link.data(links, d => d.target.id);
+            link.exit().remove();
+            link.enter()
+                .insert("line", ".node")
+                .attr("class", "link");
+
+            node = node.data(nodes, d => d.id);
+            node.exit().remove();
+    
+            let nodeEnter = node.enter()
+                                .append("g")
+                                .attr("class", "node")
+                                .on("click", click)
+                                .call(force.drag);
+            nodeEnter.append("circle")
+                        .attr("r", d => Math.sqrt(d.size) / 10 || 4.5);
+            nodeEnter.append("text")
+                        .attr("dy", ".35em")
+                        .style('fill', 'white')
+                        .text(d => d.name);
+    
+            node.select("circle")
+                .style("fill", color);
+        }
+    
+        const tick = () => {
+            link.attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+    
+            node.attr("transform", d => "translate(" + d.x + "," + d.y + ")");
+        }
+    
+        const color = d => {
+            return d._children ? "gold"
+                : d.children ? "#ffd700"
+                : "black";
+        }
+    
+        const click = d => {
+            if (d3.event.defaultPrevented) return;
+            if (d.children) {
+                d._children = d.children;
+                d.children = null;
+            } else {
+                d.children = d._children;
+                d._children = null;
+            }
+            update();
+        }
+    
+        const flatten = dataset => {
+            const nodes = []
+            let i = 0;
+    
+            const recurse = node => {
+                if (node.children) {
+                    node.children.forEach(recurse);
+                }
+                if (!node.id) {
+                    node.id = ++i;
+                }
+                nodes.push(node);
+            }
+    
+            recurse(dataset);
+            return nodes;
+        }
+    
+        const force = d3.layout.force()
+                        .linkDistance(80)
+                        .charge(-120)
+                        .gravity(.05)
+                        .size([width, height])
+                        .on("tick", tick);
+    
+        update();
+    </script>
+
+</body>
+</html>
