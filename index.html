@@ -19,11 +19,14 @@
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
         :root {
-            --main-black: #000000;
-            --main-white: #f0f0f0;
-            --main-red: #de3f53;
-            --main-blue: #45567d;
-            --main-gray: #303841;
+            --color-background: #f0f0f0;
+            --color-block: #de3f53;
+            --color-highlight: #45567d;
+            --color-trim: #daa520;
+
+            --color-black: #000000;
+            --color-white: #f0f0f0;
+            --color-gray: #9aa0a7;
         }
 
         * {
@@ -33,7 +36,7 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Open Sans', 'Segoe UI', Tahoma, Verdana, sans-serif;
             scroll-behavior: smooth;
             line-height: 1.4;
             font-size: 1.2vw;
@@ -54,7 +57,7 @@
 
         a {
             text-decoration: none;
-            color: var(--main-white);
+            color: var(--color-white);
         }
 
         .nav {
@@ -64,8 +67,8 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: var(--main-red);
-            box-shadow: 0 0.2vw 0 rgba(0, 0, 0, 0.4);
+            background-color: var(--color-block);
+            box-shadow: 0 0.1vw 0.4vw rgba(0, 0, 0, 0.2);
             z-index: 10;
         }
 
@@ -90,11 +93,11 @@
             display: block;
             padding: 1vw;
             text-decoration: none;
-            color: var(--main-white);
+            color: var(--color-white);
         }
 
         .nav-list a:hover {
-            background: var(--main-blue);
+            background-color: var(--color-highlight);
         }
 
         .welcome-section {
@@ -104,11 +107,11 @@
             align-items: center;
             width: 100%;
             height: 100vh;
-            background-color: var(--main-black);
+            background-color: var(--color-background);
             background-image: linear-gradient(
                 180deg,
-                var(--main-gray) 0%,
-                var(--main-black) 100%
+                var(--color-gray) 0%,
+                var(--color-background) 100%
             );
         }
 
@@ -117,7 +120,7 @@
             text-align: center;
             font-weight: 700;
             font-size: 5vw;
-            color: var(--main-white);
+            color: var(--color-black);
         }
 
         .welcome-section__paragraph {
@@ -125,7 +128,7 @@
             font-size: 2vw;
             font-weight: 200;
             font-style: italic;
-            color: var(--main-red);
+            color: var(--color-block);
         }
 
         .about-me {
@@ -140,8 +143,8 @@
             margin: 0;
             padding: 1vw;
             width: 50%;
-            background-color: var(--main-black);
-            color: var(--main-white);
+            background-color: var(--color-background);
+            color: var(--color-black);
         }
 
         @media (max-width: 600px) {
@@ -157,7 +160,7 @@
 
         .node circle {
             cursor: pointer;
-            stroke: gold;
+            stroke: var(--color-block);
             stroke-width: 0.15vw;
         }
 
@@ -170,26 +173,26 @@
 
         line.link {
             fill: none;
-            stroke: gold;
+            stroke: var(--color-block);
             stroke-width: 0.15vw;
         }
 
         .projects-section {
             padding: 1vw 0.1vw 4vw 0.1vw;
             text-align: center;
-            background-color: var(--main-blue);
+            background-color: var(--color-background);
             background-image: linear-gradient(
                 0deg,
-                var(--main-gray) 0%,
-                var(--main-black) 100%
+                var(--color-gray) 0%,
+                var(--color-background) 100%
             );
         }
 
         .projects-section__heading {
-            color: var(--main-white);
+            color: var(--color-black);
             max-width: 25%;
             margin: 0 auto 2.5vw auto;
-            border-bottom: 0.2vw solid var(--main-white);
+            border-bottom: 0.2vw solid var(--color-black);
         }
 
         .projects-grid {
@@ -224,18 +227,18 @@
         }
 
         .project {
-            background: var(--main-red);
+            background-color: var(--color-block);
             box-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
             border-radius: 0.2vw;
         }
 
         .project-code {
-            color: var(--main-red);
+            color: var(--color-block);
             transition: color 0.3s ease-out;
         }
 
         .project:hover .project-code {
-            color: var(--main-white);
+            color: var(--color-white);
         }
 
         .project-image {
@@ -255,12 +258,12 @@
         }
 
         .btn-show-all {
-            background: var(--main-red);
+            background-color: var(--color-block);
             transition: background 0.3s ease-out;
         }
 
         .btn-show-all:hover {
-            background: var(--main-red);
+            background-color: var(--color-highlight);
         }
 
         .btn-show-all:hover > i {
@@ -277,18 +280,22 @@
             display: flex;
             justify-content: space-evenly;
             padding: 1vw;
-            background: var(--main-gray);
-            border-top: 0.4vw solid var(--main-red);
+            background-color: var(--color-block);
+            box-shadow: 0 0 0.4vw var(--color-trim);
         }
 
         footer > p {
             margin: 0.2vw;
             padding: 0;
-            color: var(--main-white);
+            color: var(--color-white);
         }
 
         footer i {
             vertical-align: middle;
+        }
+
+        footer .contact-details:hover {
+            color: var(--color-highlight);
         }
 
         @media (max-width: 600px) {
@@ -322,7 +329,12 @@
         <div id="about" class="about-section">
             <h2 class="about-section__heading">About Me</h2>
             <p class="about-section__paragraph">
-                Hi, I'm Zak! I love exploring new places, new ideas and new projects.
+                Hi, I'm Zak! I get computers to do maths, which is what they 
+                call a software developer and data scientist, but what I really 
+                do is make people's lives better.
+            </p>
+            <p class="about-section__paragraph">
+                I love exploring new places, new ideas and new projects.
                 I have a passion for solving problems and creating new things.
                 Check out my latest projects and see if they spark your imagination.
             </p>
@@ -504,8 +516,6 @@
         const height = 600;
         const svg = d3.select("#skills-graph")
                         .append("svg")
-                    // .attr("width", width)
-                    // .attr("height", height);
                         .attr("preserveAspectRatio", "xMinYMin meet")
                         .attr("viewBox", "0 0 960 600");
 
@@ -538,7 +548,7 @@
                         .attr("r", d => Math.sqrt(d.size) / 10 || 4.5);
             nodeEnter.append("text")
                         .attr("dy", ".35em")
-                        .style('fill', 'white')
+                        .style('fill', 'black')
                         .text(d => d.name);
     
             node.select("circle")
@@ -555,11 +565,11 @@
         }
     
         const color = d => {
-            return d._children ? "gold"
-                : d.children ? "#ffd700"
-                : "black";
+            return d._children ? "#de3f53"
+                : d.children ? "#de3f54"
+                : "#f0f0f0";
         }
-    
+
         const click = d => {
             if (d3.event.defaultPrevented) return;
             if (d.children) {
