@@ -161,11 +161,13 @@ a {
 .welcome-section__descriptors > li:nth-child(2) {
     -webkit-animation: floating-words 4s infinite linear;
     animation: floating-words 4s infinite linear reverse;
+    animation-delay: -1s;
 }
 
 .welcome-section__descriptors > li:nth-child(3) {
     -webkit-animation: floating-words 5s infinite linear;
     animation: floating-words 5s infinite linear;
+    animation-delay: -3s;
 }
 
 .welcome-section__circles {
@@ -291,6 +293,17 @@ a {
     animation-duration: 11s;
 }
 
+.contact-details {
+    display: inline-block;
+    padding: 0.5vw 1vw;
+    border-radius: 0.2vw;
+    transition: color 0.3s ease-out;
+}
+
+.contact-details:hover {
+    color: var(--color-highlight);
+}
+
 .about-me {
     display: flex;
     flex-direction: row;
@@ -318,6 +331,21 @@ a {
     }
 }
 
+.about-section__contact {
+    margin: 0;
+    padding: 0 1vw 0 2vw;
+    list-style: none;
+}
+
+.about-section__contact a {
+    color: var(--color-black);
+    transition: color 0.3s ease-out;
+}
+
+.about-section__contact a:hover {
+    color: var(--color-trim);
+}
+
 .node circle {
     cursor: pointer;
     stroke: var(--color-block);
@@ -337,6 +365,10 @@ line.link {
     stroke-width: 0.15vw;
 }
 
+.skills-section__paragraph {
+    padding: 0 1vw;
+}
+
 .projects-section {
     padding: 1vw 0.1vw 4vw 0.1vw;
     text-align: center;
@@ -347,7 +379,6 @@ line.link {
     color: var(--color-black);
     max-width: 25%;
     margin: 0 auto 2.5vw auto;
-    border-bottom: 0.2vw solid var(--color-black);
 }
 
 .projects-grid {
@@ -408,16 +439,13 @@ line.link {
 
 .btn {
     display: inline-block;
-    padding: 0.5vw 1vw;
-    border-radius: 0.2vw;
-}
-
-.btn-show-all {
+    padding: 2.5vw 0.5vw;
+    border-radius: 50%;
     background-color: var(--color-block);
     transition: background-color 0.3s ease-out;
 }
 
-.btn-show-all:hover {
+.btn:hover {
     background-color: var(--color-highlight);
 }
 
@@ -447,10 +475,6 @@ footer > p {
 
 footer i {
     vertical-align: middle;
-}
-
-footer .contact-details:hover {
-    color: var(--color-highlight);
 }
 
 @media (max-width: 600px) {
