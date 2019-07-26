@@ -145,7 +145,7 @@ const update = () => {
     nodeEnter.append("circle")
                 .attr("r", d => Math.sqrt(d.size) / 10 || 4.5);
     nodeEnter.append("text")
-                .attr("dy", ".35em")
+                .attr("dy", ".35vw")
                 .style('fill', 'black')
                 .text(d => d.name);
 
