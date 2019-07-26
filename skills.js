@@ -13,7 +13,8 @@ const dataset = {
                     "size": 2500,
                     "children": [
                         {"name": "D3", "size": 2938},
-                        {"name": "React", "size": 3812},
+                        {"name": "React", "size": 6714},
+                        {"name": "Redux", "size": 3812},
                         {"name": "Node.js", "size": 6714},
                         {"name": "Express", "size": 3743},
                         {"name": "Stripe.js", "size": 621}
@@ -53,8 +54,7 @@ const dataset = {
                     ]
                 },
                 {"name": "Excel", "size": 6500},
-                {"name": "WebFOCUS", "size": 621},
-                {"name": "SAP", "size": 621}
+                {"name": "WebFOCUS", "size": 621}
             ]
         },
         {
