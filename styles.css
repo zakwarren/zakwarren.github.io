@@ -406,7 +406,7 @@ a {
 }
 
 .btn {
-    padding: 2.5vw 0.5vw;
+    padding: 2.7vw 0.5vw;
     border-radius: 50%;
     background-color: var(--color-block);
     transition: background-color 0.3s ease-out;
