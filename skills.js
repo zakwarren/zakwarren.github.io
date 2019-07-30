@@ -112,6 +112,9 @@ const dataset = {
 
 const width = 800;
 const height = 600;
+const colorBlock = getComputedStyle(document.body).getPropertyValue('--color-block');
+const colorWhite = getComputedStyle(document.body).getPropertyValue('--color-white');
+
 const svg = d3.select("#skills-graph")
                 .append("svg")
                 .attr("preserveAspectRatio", "xMinYMin meet")
@@ -163,9 +166,9 @@ const tick = () => {
 }
 
 const color = d => {
-    return d._children ? "#de3f53"
-        : d.children ? "#de3f54"
-        : "#f0f0f0";
+    return d._children ? colorBlock
+        : d.children ? colorBlock
+        : colorWhite;
 }
 
 const click = d => {
