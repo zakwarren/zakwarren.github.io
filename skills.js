@@ -1,104 +1,100 @@
 const dataset = {
     "name": "Skills",
-    "size": 10000,
+    "size": 25000,
     "children": [
         {
             "name": "Web",
-            "size": 5000,
+            "size": 12500,
             "children": [
-                {"name": "HTML", "size": 5731},
-                {"name": "CSS", "size": 5262},
+                {"name": "HTML", "size": 6250},
+                {"name": "CSS", "size": 6250},
                 {
                     "name": "Javascript",
-                    "size": 2500,
+                    "size": 6250,
                     "children": [
-                        {"name": "D3", "size": 2938},
-                        {"name": "React", "size": 6714},
-                        {"name": "Redux", "size": 3812},
-                        {"name": "Node.js", "size": 6714},
-                        {"name": "Express", "size": 3743},
-                        {"name": "Stripe.js", "size": 621}
+                        {"name": "D3", "size": 3184},
+                        {"name": "Node.js", "size": 5238},
+                        {"name": "Express", "size": 2938}
                     ]
                 },
                 {
                     "name": "Python",
-                    "size": 2500,
+                    "size": 6250,
                     "children": [
-                        {"name": "Django", "size": 7840}
+                        {"name": "Django", "size": 5555}
                     ]
                 }
             ]
         },
         {
             "name": "Analytics",
-            "size": 5000,
+            "size": 12500,
             "children": [
                 {
                     "name": "Python",
-                    "size": 2500,
+                    "size": 6250,
                     "children": [
                         {"name": "Tensorflow", "size": 531},
-                        {"name": "Pandas", "size": 3814},
-                        {"name": "Matplotlib", "size": 3814},
-                        {"name": "OpenCSV", "size": 3481}
+                        {"name": "Pandas", "size": 2418},
+                        {"name": "Matplotlib", "size": 2418},
+                        {"name": "OpenCSV", "size": 2841}
                     ]
                 },
                 {
                     "name": "SQL",
-                    "size": 2500,
+                    "size": 6250,
                     "children": [
-                        {"name": "SSRS", "size": 5271},
+                        {"name": "SSRS", "size": 5892},
                         {"name": "SSAS", "size": 4882},
-                        {"name": "T-SQL", "size": 7091},
-                        {"name": "Data Warehouse", "size": 5848}
+                        {"name": "T-SQL", "size": 6000},
+                        {"name": "Data Warehouse", "size": 5289}
                     ]
                 },
-                {"name": "Excel", "size": 6500},
-                {"name": "WebFOCUS", "size": 621}
+                {"name": "Excel", "size": 6250},
+                {"name": "WebFOCUS", "size": 250}
             ]
         },
         {
             "name": "Applications",
-            "size": 5000,
+            "size": 12500,
             "children": [
                 {
                     "name": "Python",
-                    "size": 2500,
+                    "size": 6250,
                     "children": [
                         {"name": "Selenium", "size": 3534},
                         {"name": "BeautifulSoup", "size": 3416},
-                        {"name": "Docx", "size": 3814},
-                        {"name": "Tweepy", "size": 5914},
+                        {"name": "Docx", "size": 2841},
+                        {"name": "Tweepy", "size": 3344}
                     ]
                 },
                 {
                     "name": "C#",
+                    "size": 6250,
                     "children": [
-                        {"name": "Unity", "size": 7074}
+                        {"name": "Unity", "size": 4628}
                     ]
                 },
-                {"name": "Git", "size": 4068}
+                {"name": "Git", "size": 5555}
             ]
         },
         {
             "name": "Databases",
-            "size": 5000,
+            "size": 12500,
             "children": [
-                {"name": "SSMS", "size": 9072},
-                {"name": "T-SQL", "size": 7091},
+                {"name": "SSMS", "size": 6250},
+                {"name": "T-SQL", "size": 6250},
                 {"name": "MySQL", "size": 4812},
-                {"name": "Postgresql", "size": 3712},
-                {"name": "SQLite", "size": 2649},
-                {"name": "NoSQL", "size": 5821},
-                {"name": "GraphQL", "size": 5821}
+                {"name": "Postgresql", "size": 2112},
+                {"name": "SQLite", "size": 2649}
             ]
         },
         {
             "name": "Servers",
-            "size": 5000,
+            "size": 12500,
             "children": [
-                {"name": "Windows", "size": 6500},
-                {"name": "Linux", "size": 6500},
+                {"name": "Windows", "size": 6250},
+                {"name": "Linux", "size": 6250},
                 {"name": "Apache", "size": 3426},
                 {"name": "Gunicorn", "size": 3426},
                 {"name": "CLI", "size": 5982},
