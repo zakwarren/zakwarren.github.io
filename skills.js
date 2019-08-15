@@ -50,8 +50,7 @@ const dataset = {
                         {"name": "Data Warehouse", "size": 5289}
                     ]
                 },
-                {"name": "Excel", "size": 6250},
-                {"name": "WebFOCUS", "size": 250}
+                {"name": "Excel", "size": 6250}
             ]
         },
         {
