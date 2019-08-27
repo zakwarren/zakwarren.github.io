@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+:root {
+    --color-background: #f0f0f0;
+    --color-block: #de3f53;
+    --color-subtle: rgba(222, 63, 83, 0.1);
+    --color-highlight: #45567d;
+    --color-trim: #daa520;
+
+    --color-black: #000000;
+    --color-white: #f0f0f0;
+    --color-gray: #9aa0a7;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.4;
+    font-size: 1.2vw;
+}
+
+h1,
+h2 {
+    margin: 0;
+    padding: 1vw;
+    font-size: 3vw;
+}
+
+p {
+    margin: 0;
+    padding: 1vw;
+    font-size: 1.5vw;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    margin: 0 0 0 1vw;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list__item {
+    margin: 0.5vw;
+    padding: 0.5vw;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-color: var(--color-block);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: background-color 0.3s ease-out;
+}
+
+.nav-list__item:hover {
+    background-color: var(--color-highlight);
+}
+
+@media (max-width: 600px) {
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 0.1vw;
+    }
+
+    .nav-list__item {
+        margin: 0.5vw 4vw;
+    }
+}
+
+.nav-list a {
+    display: block;
+    padding: 1vw;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.contact-details {
+    display: inline-block;
+    padding: 0.5vw 1vw;
+    border-radius: 0.2vw;
+    transition: color 0.3s ease-out;
+}
+
+.contact-details:hover {
+    color: var(--color-highlight);
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1vw;
+    background-color: var(--color-block);
+    box-shadow: 0 0 0.4vw var(--color-trim);
+}
+
+footer > p {
+    margin: 0.2vw;
+    padding: 0;
+    color: var(--color-white);
+}
+
+footer i {
+    vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
