@@ -1,110 +1,3 @@
-const dataset = {
-    "name": "Skills",
-    "size": 25000,
-    "children": [
-        {
-            "name": "Web",
-            "size": 12500,
-            "children": [
-                {"name": "HTML", "size": 6250},
-                {"name": "CSS", "size": 6250},
-                {
-                    "name": "Javascript",
-                    "size": 6250,
-                    "children": [
-                        {"name": "D3", "size": 3184},
-                        {"name": "Node.js", "size": 5238},
-                        {"name": "Express", "size": 2938}
-                    ]
-                },
-                {
-                    "name": "Python",
-                    "size": 6250,
-                    "children": [
-                        {"name": "Django", "size": 5555}
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Analytics",
-            "size": 12500,
-            "children": [
-                {
-                    "name": "Python",
-                    "size": 6250,
-                    "children": [
-                        {"name": "Tensorflow", "size": 531},
-                        {"name": "Pandas", "size": 2418},
-                        {"name": "Matplotlib", "size": 2418},
-                        {"name": "OpenCSV", "size": 2841}
-                    ]
-                },
-                {
-                    "name": "SQL",
-                    "size": 6250,
-                    "children": [
-                        {"name": "SSRS", "size": 5892},
-                        {"name": "SSAS", "size": 4882},
-                        {"name": "T-SQL", "size": 6000},
-                        {"name": "Data Warehouse", "size": 5289}
-                    ]
-                },
-                {"name": "Excel", "size": 6250}
-            ]
-        },
-        {
-            "name": "Applications",
-            "size": 12500,
-            "children": [
-                {
-                    "name": "Python",
-                    "size": 6250,
-                    "children": [
-                        {"name": "Selenium", "size": 3534},
-                        {"name": "BeautifulSoup", "size": 3416},
-                        {"name": "Docx", "size": 2841},
-                        {"name": "Tweepy", "size": 3344}
-                    ]
-                },
-                {
-                    "name": "C#",
-                    "size": 6250,
-                    "children": [
-                        {"name": "Unity", "size": 4628}
-                    ]
-                },
-                {"name": "Git", "size": 5555}
-            ]
-        },
-        {
-            "name": "Databases",
-            "size": 12500,
-            "children": [
-                {"name": "SSMS", "size": 6250},
-                {"name": "T-SQL", "size": 6250},
-                {"name": "MySQL", "size": 4812},
-                {"name": "Postgresql", "size": 2112},
-                {"name": "SQLite", "size": 2649}
-            ]
-        },
-        {
-            "name": "Servers",
-            "size": 12500,
-            "children": [
-                {"name": "Windows", "size": 6250},
-                {"name": "Linux", "size": 6250},
-                {"name": "Apache", "size": 3426},
-                {"name": "Gunicorn", "size": 3426},
-                {"name": "CLI", "size": 5982},
-                {"name": "Nmap", "size": 5782},
-                {"name": "cmd", "size": 5782},
-                {"name": "PowerShell", "size": 425}
-            ]
-        }
-    ]
-}
-
 const width = 800;
 const height = 600;
 const colorBlock = getComputedStyle(document.body).getPropertyValue('--color-block');
@@ -119,7 +12,7 @@ let link = svg.selectAll(".link");
 let node = svg.selectAll(".node");
 
 const update = () => {
-    let nodes = flatten(dataset);
+    let nodes = flatten(skillsDataset);
     let links = d3.layout.tree().links(nodes);
 
     force.nodes(nodes)
@@ -178,7 +71,7 @@ const click = d => {
     update();
 }
 
-const flatten = dataset => {
+const flatten = skillsDataset => {
     const nodes = []
     let i = 0;
 
@@ -192,7 +85,7 @@ const flatten = dataset => {
         nodes.push(node);
     }
 
-    recurse(dataset);
+    recurse(skillsDataset);
     return nodes;
 }
 
