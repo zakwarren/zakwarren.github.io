@@ -68,8 +68,8 @@
             <h2 class="about-section__heading">About Me</h2>
             <p class="about-section__paragraph">
                 Hi, I'm Zak! I get computers to do interesting things, which is 
-                what they call a software developer and data scientist. But what 
-                I really do is make people's lives better.
+                what they call a software developer. But what I really do is make 
+                people's lives better.
             </p>
             <p class="about-section__paragraph">
                 I love exploring new places, new ideas and new activities.
@@ -123,10 +123,12 @@
     </footer>
 
     <script src="scripts/project-list.js"></script>
+    <script src="scripts/display-projects.js"></script>
     <script>
         const projectsToDisplay = 3;
+        const isLink = true;
+        displayProjects(projects, projectGrid, projectsToDisplay, isLink);
     </script>
-    <script src="scripts/display-projects.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="scripts/skills-list.js"></script>

@@ -19,7 +19,8 @@
 }
 
 .project-grid__tile {
-    max-width: 25%;
+    margin: 1vw;
+    max-width: 22%;
     max-height: auto;
     position: relative;
 }
@@ -34,12 +35,14 @@
     }
 
     .project-grid__tile {
-        max-width: 50%;
+        max-width: 46%;
     }
 }
 
 .project-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     vertical-align: middle;
 }
 
