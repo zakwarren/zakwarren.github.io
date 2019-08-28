@@ -115,10 +115,11 @@
 }
 
 .blog-close {
-    color: var(--color-white);
     float: right;
     font-size: 2vw;
     font-weight: bold;
+    color: var(--color-white);
+    transition: color 0.3s ease-out;
 }
 
 .blog-close:hover,
@@ -139,9 +140,10 @@
 .blog-link {
     padding: 0.2vw 1.6vw;
     cursor: pointer;
-    color: var(--color-highlight);
     text-decoration: underline;
     font-size: 1.5vw;
+    color: var(--color-highlight);
+    transition: color 0.3s ease-out;
 }
 
 .blog-link:hover {
