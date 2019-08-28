@@ -1,16 +1,31 @@
 let blogModal = document.getElementById("blogModal");
 let blogClose = document.getElementById("blogClose");
 let blogHeading = document.getElementById("blogHeading");
-let blogBody = document.getElementById("blogBody");
 let blogLink = document.getElementById("blogLink");
+let blogBody = document.getElementById("blogBody");
 
 let projectSet = document.getElementsByClassName("project");
+
+const loadBlog = (blogMd) => {
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+         let mdText = this.responseText;
+         let converter = new showdown.Converter();
+         let htmlBlog = converter.makeHtml(mdText);
+         blogBody.innerHTML = htmlBlog;
+      }
+   };
+   xhttp.open("GET", "https://raw.githubusercontent.com/zakwarren/cashlesscards/master/README.md", true); // TODO swap link to: blogMd
+   xhttp.send();
+ };
 
 const openModal = (projectId) => {
    for (let i = 0; i < projects.length; i++) {
       if (projects[i].id == projectId) {
          blogHeading.textContent = projects[i].title;
          blogLink.href = projects[i].url;
+         loadBlog(projects[i].blog);
       }
    }
    blogModal.classList.remove("modal-hide");
@@ -20,6 +35,7 @@ const openModal = (projectId) => {
 const closeModal = () => {
    blogModal.classList.remove("modal-show");
    blogModal.classList.add("modal-hide");
+   blogBody.innerHTML = "";
 };
 
 window.onclick = (event) => {
@@ -35,16 +51,3 @@ for(let i = 0; i < projectSet.length; i++) {
       openModal(projectSet[i].id);
    };
 }
-
-
-//let mdFile = new XMLHttpRequest();
-//mdFile.open("GET", "blogs/test.md", true);
-//mdFile.onreadystatechange = () => {
-//   if (mdFile.readyState === 4 && mdFile.status === 200)   
-//   {
-//      let mdText = mdFile.responseText; 
-//      let converter = new showdown.Converter();
-//      converter.makeHtml(mdText);
-//      console.log(converter);
-//   }
-//}

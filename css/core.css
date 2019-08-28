@@ -28,10 +28,22 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     margin: 0;
     padding: 1vw;
+}
+
+h1 {
     font-size: 3vw;
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 2vw;
 }
 
 p {
