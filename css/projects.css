@@ -26,7 +26,7 @@
     position: relative;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .projects-section {
         width: 100%;
     }
@@ -37,6 +37,20 @@
 
     .project-grid__tile {
         max-width: 46%;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-section {
+        width: 100%;
+    }
+
+    .projects-grid {
+        align-content: space-between;
+    }
+
+    .project-grid__tile {
+        max-width: 100%;
     }
 }
 
