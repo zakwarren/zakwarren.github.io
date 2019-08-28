@@ -22,6 +22,7 @@
     margin: 1vw;
     max-width: 22%;
     max-height: auto;
+    border-radius: 1vw;
     position: relative;
 }
 
@@ -42,6 +43,7 @@
 .project-image {
     width: 100%;
     height: 100%;
+    border-radius: 1vw;
     object-fit: cover;
     vertical-align: middle;
 }
@@ -54,6 +56,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    border-radius: 1vw;
     opacity: 0;
     transition: 0.3s ease;
     background-color: var(--color-highlight);
@@ -70,4 +73,90 @@
 .project-title {
     text-align: center;
     font-size: 1.5vw;
+}
+
+.blog-modal {
+    padding-top: 6vw;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 1vw;
+    z-index: 1;
+    position: fixed;
+    overflow: auto;
+    background-color: var(--color-black);
+    background-color: var(--color-shadow);
+}
+
+.blog-content {
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    border-radius: 1vw;
+    border: 0.1vw solid var(--color-trim);
+    position: relative;
+    background-color: var(--color-white);
+    box-shadow: 0 0.4vw 0.8vw 0 var(--color-shadow),0 0.6vw 2vw 0 var(--color-shadow);
+    -webkit-animation-name: modal-animate;
+    -webkit-animation-duration: 0.4s;
+    animation-name: modal-animate;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes modal-animate {
+    from {top:-10vw; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes modal-animate {
+    from {top:-10vw; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.blog-close {
+    color: var(--color-white);
+    float: right;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.blog-close:hover,
+.blog-close:focus {
+    color: var(--color-highlight);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.blog-header {
+    padding: 0.2vw 1.6vw;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    background-color: var(--color-block);
+    color: var(--color-white);
+}
+
+.blog-link {
+    padding: 0.2vw 1.6vw;
+    cursor: pointer;
+    color: var(--color-highlight);
+    text-decoration: underline;
+    font-size: 1.5vw;
+}
+
+.blog-link:hover {
+    color: var(--color-trim);
+    text-decoration: none;
+}
+
+.blog-body {
+    padding: 0.2vw 1.6vw;
+}
+
+.modal-hide {
+    display: none;
+}
+
+.modal-show {
+    display: block;
 }
