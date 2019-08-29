@@ -1,19 +1,15 @@
 const projectGrid = document.getElementById("keyProjects");
 
-const displayProjects = (projects, projectGrid, projectsToDisplay, isLink) => {
-    let url;
+const displayProjects = (projects, projectGrid, projectsToDisplay) => {
+    let div;
     let img;
     let overlay;
     let title;
     for (let projectId = 0; projectId < projectsToDisplay; projectId++) {
-        url = document.createElement("a");
-        url.classList.add("project");
-        url.classList.add("project-grid__tile");
-        url.setAttribute("id", projects[projectId].id);
-        if (isLink) {
-            url.setAttribute("href", projects[projectId].url);
-            url.setAttribute("target", "_blank");
-        }
+        div = document.createElement("div");
+        div.classList.add("project");
+        div.classList.add("project-grid__tile");
+        div.setAttribute("id", projects[projectId].id);
 
         img = document.createElement("img");
         img.classList.add("project-image");
@@ -27,10 +23,10 @@ const displayProjects = (projects, projectGrid, projectsToDisplay, isLink) => {
         title.classList.add("project-title");
         title.textContent = projects[projectId].title;
 
-        url.appendChild(img);
-        url.appendChild(overlay);
+        div.appendChild(img);
+        div.appendChild(overlay);
         overlay.appendChild(title);
 
-        projectGrid.appendChild(url);
+        projectGrid.appendChild(div);
     }
 }

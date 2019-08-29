@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/core.css" />
     <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" type="text/css" href="css/blog.css" />
     <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -59,6 +60,19 @@
                 <a class="btn btn-show-all" href="projects.html">
                     See more <i class="fas fa-chevron-right"></i>
                 </a>
+
+                <div id="blogModal" class="blog-modal modal-hide">
+                    <div class="blog-content">
+                        <div class="blog-header">
+                            <span id="blogClose" class="blog-close">&times;</span>
+                            <h2 id="blogHeading" class="blog-heading"></h2>
+                        </div>
+                        <div class="blog-body">
+                            <a id="blogLink" class="blog-link" href="#" target="_blank">Check it out here</a>
+                            <div id="blogBody"></div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </header>
@@ -126,9 +140,11 @@
     <script src="scripts/display-projects.js"></script>
     <script>
         const projectsToDisplay = 3;
-        const isLink = true;
-        displayProjects(projects, projectGrid, projectsToDisplay, isLink);
+        displayProjects(projects, projectGrid, projectsToDisplay);
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.0/dist/showdown.min.js"></script>
+    <script src="scripts/display-writeup.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="scripts/skills-list.js"></script>

@@ -16,7 +16,7 @@ const loadBlog = (blogMd) => {
          blogBody.innerHTML = htmlBlog;
       }
    };
-   xhttp.open("GET", "https://raw.githubusercontent.com/zakwarren/cashlesscards/master/README.md", true); // TODO swap link to: blogMd
+   xhttp.open("GET", blogMd, true);
    xhttp.send();
  };
 
@@ -25,7 +25,8 @@ const openModal = (projectId) => {
       if (projects[i].id == projectId) {
          blogHeading.textContent = projects[i].title;
          blogLink.href = projects[i].url;
-         loadBlog(projects[i].blog);
+         //loadBlog(projects[i].blog); // TODO uncomment
+         loadBlog("https://raw.githubusercontent.com/zakwarren/cashlesscards/master/README.md"); // TODO remove
       }
    }
    blogModal.classList.remove("modal-hide");
