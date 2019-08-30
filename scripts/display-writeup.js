@@ -25,8 +25,7 @@ const openModal = (projectId) => {
       if (projects[i].id == projectId) {
          blogHeading.textContent = projects[i].title;
          blogLink.href = projects[i].url;
-         //loadBlog(projects[i].blog); // TODO uncomment
-         loadBlog("https://raw.githubusercontent.com/zakwarren/cashlesscards/master/README.md"); // TODO remove
+         loadBlog(projects[i].blog);
       }
    }
    blogModal.classList.remove("modal-hide");
