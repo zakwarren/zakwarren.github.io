@@ -24,6 +24,7 @@
     max-height: auto;
     border-radius: 1vw;
     position: relative;
+    cursor: pointer;
 }
 
 @media (max-width: 800px) {
