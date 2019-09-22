@@ -2,7 +2,7 @@ const projects = [
     {
         "id": "albieAdventures",
         "title": "Albie Adventures Game",
-        "url": "https://www.sharemygame.com/share/484b2062-4881-47c1-bb65-efab8a04e49b",
+        "url": "https://play.google.com/store/apps/details?id=com.AppsForAdventure.AlbieAdventures",
         "image": "images/projects/albieadventures.png",
         "alt": "Albie Adventures Game",
         "blog": "blogs/albieAdventures.md"
