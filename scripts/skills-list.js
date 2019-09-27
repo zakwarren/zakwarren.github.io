@@ -14,7 +14,8 @@ const skillsDataset = {
                     "children": [
                         {"name": "D3", "size": 3184},
                         {"name": "Node.js", "size": 5238},
-                        {"name": "Express", "size": 2938}
+                        {"name": "Express", "size": 2938},
+                        {"name": "Stripe", "size": 3534}
                     ]
                 },
                 {

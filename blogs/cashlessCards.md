@@ -84,6 +84,23 @@ But soon enough it all came together. Now admin staff could add
 vouchers to customers. Each voucher could have a different timescale,
 for example weekly or monthly, for when it's applied.
 
+## Stripe.js
+
+As a bonus challenge to myself, and to improve the overall utility
+of the system, I wanted to integrate stripe.js into the project.
+The idea was to enable customers to add money to their own accounts
+through verified credit or debit card payments.
+
+After swiping their card and seeing their account details, a new
+button appears that takes them to a new form. They can enter the
+amount of money they want to add to their account, then select
+the card payment button. This opens the stripe checkout modal that
+accepts card details, which it sends to stripe's own servers for
+processing. This meant I didn't have to worry about all the financial
+compliance rules and regulations. Stripe sends back a token to say
+payment was successful and Cashless Cards adds the amount to the
+customer's account. They can then use this straight away.
+
 ## Deployment
 
 Building the app was only half the story. I also wanted to figure
@@ -96,10 +113,11 @@ Now all the server administrator has to do is navigate to the
 cashlesscards project directory and enter:
 
 ```bash
+python3 installdependencies.py
 python3 deploy.py
 ```
 
-This installs all the dependencies and walks the user through
+These install all the dependencies and walks the user through
 the setup of the database and configuration of Cashless Cards.
 
 This turned out to be a good little project to practice my
