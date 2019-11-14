@@ -7,7 +7,7 @@ similar to the mechanics of a platformer game. This
 became the kernel that would ultimately lead to the
 Albie Adventures game!
 
-![Albie Adventures Game](images/projects/albieadventures.png "Albie Adventures Game")
+![Albie Adventures Game](images/projects/albieadventures.jpg "Albie Adventures Game")
 
 ## Creation
 
