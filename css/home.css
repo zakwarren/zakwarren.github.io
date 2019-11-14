@@ -130,6 +130,12 @@
     animation-duration: 11s;
 }
 
+@media (max-width: 600px) {
+    .landing__circles {
+        display: none;
+    }
+}
+
 .welcome-section {
     margin: 0;
     display: flex;
