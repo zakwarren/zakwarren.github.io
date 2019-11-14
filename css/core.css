@@ -2,9 +2,9 @@
 
 :root {
     --color-background: #f0f0f0;
-    --color-block: #de3f53;
+    --color-block: #000000;
     --color-subtle: rgba(222, 63, 83, 0.1);
-    --color-highlight: #45567d;
+    --color-highlight: #daa520;
     --color-trim: #daa520;
     --color-shadow: rgba(0, 0, 0, 0.4);
 
@@ -57,6 +57,48 @@ a {
     color: var(--color-white);
 }
 
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 3.75vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+
+    body,
+    p,
+    a,
+    li {
+        font-size: 2.25vw;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    body,
+    p,
+    a,
+    li {
+        font-size: 3vw;
+    }
+}
+
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -91,6 +133,19 @@ a {
     background-color: var(--color-highlight);
 }
 
+.main-heading {
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 1000px) {
+    .nav-list__item {
+        padding-top: 1.5vw;
+        width: 9vw;
+        height: 9vw;
+    }
+}
+
 @media (max-width: 600px) {
     .nav {
         justify-content: center;
@@ -102,6 +157,14 @@ a {
 
     .nav-list__item {
         margin: 0.5vw 4vw;
+        padding-top: 2vw;
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .main-heading {
+        margin-top: 12vw;
+        text-align: center;
     }
 }
 

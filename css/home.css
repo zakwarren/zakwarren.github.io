@@ -151,6 +151,32 @@
     color: var(--color-white);
 }
 
+.welcome-section__descriptors {
+    margin: 0 4vw;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.welcome-section__descriptors > li {
+    margin: 0 2vw;
+    padding: 0;
+    font-weight: 200;
+    font-style: italic;
+    text-align: center;
+    color: var(--color-white);
+    list-style: none;
+    display: inline-block;
+}
+
+@media (max-width: 1000px) {
+    .welcome-section__descriptors {
+        margin: 0vw;
+    }
+}
+
 @media (max-width: 600px) {
     .landing {
         flex-direction: column;
@@ -163,30 +189,9 @@
     }
 }
 
-.welcome-section__descriptors {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-.welcome-section__descriptors > li {
-    margin: 0 2vw;
-    padding: 0;
-    font-size: 2vw;
-    font-weight: 200;
-    font-style: italic;
-    color: var(--color-white);
-    list-style: none;
-    display: inline-block;
-}
-
 .projects-section {
     margin: 0;
     padding: 5vw 0 0 0;
-    display: column;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -220,19 +225,26 @@
     position: relative;
 }
 
+@media (max-width: 1000px) {
+    .projects-section__heading {
+        margin-top: 3vw;
+    }
+}
+
 @media (max-width: 600px) {
     .projects-section {
         height: 100%;
         width: 100%;
+        padding: 0.6vw 0.1vw;
+    }
+
+    .projects-section__heading {
+        margin-top: 0;
     }
 
     .projects-grid {
         height: auto;
         flex-direction: row;
-    }
-
-    .projects-section {
-        padding: 0.6vw 0.1vw;
     }
 
     .projects-grid {
@@ -282,6 +294,21 @@
 
 .project-image__overlay:hover {
     opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    .project {
+        height: 18vw;
+        width: 18vw;
+    }
+
+    .project-image {
+        clip-path: circle(8vw at center);
+    }
+
+    .project-image__overlay {
+        clip-path: circle(8vw at center);
+    }
 }
 
 @media (max-width: 600px) {
@@ -335,9 +362,25 @@
     transition: transform 0.3s ease-out;
 }
 
+@media (max-width: 1000px) {
+    .btn {
+        padding-top: 5vw;
+        text-align: center;
+        width: 14vw;
+        height: 14vw;
+    }
+}
+
 @media (max-width: 600px) {
+    .btn {
+        padding-top: 7vw;
+        text-align: center;
+        width: 18vw;
+        height: 18vw;
+    }
+
     .btn-show-all {
-        margin: 0 46vw;
+        margin: 0 41vw;
         right: auto;
         top: auto;
     }
@@ -362,7 +405,7 @@
 
 @media (max-width: 600px) {
     .about-me {
-        margin: 6vw 0 0.2vw 0;
+        margin: 16vw 0 0.2vw 0;
         flex-direction: column;
     }
 
