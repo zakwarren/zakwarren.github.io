@@ -34,10 +34,7 @@ const skillsDataset = {
                     "children": [
                         {"name": "Windows", "size": 6250},
                         {"name": "Linux", "size": 6250},
-                        {"name": "Apache", "size": 3426},
-                        {"name": "Gunicorn", "size": 3426},
                         {"name": "CLI", "size": 5982},
-                        {"name": "Nmap", "size": 5782},
                         {"name": "cmd", "size": 5782}
                     ]
                 }
@@ -54,9 +51,15 @@ const skillsDataset = {
                         {"name": "T-SQL", "size": 6250},
                         {"name": "SSMS", "size": 6250},
                         {"name": "SSRS", "size": 5892},
-                        {"name": "SSAS", "size": 4882},
                         {"name": "MySQL", "size": 4812},
                         {"name": "Data Warehouse", "size": 5289}
+                    ]
+                },
+                {
+                    "name": "NoSQL",
+                    "size": 6250,
+                    "children": [
+                        {"name": "MongoDB", "size": 531}
                     ]
                 },
                 {
@@ -64,7 +67,7 @@ const skillsDataset = {
                     "size": 6250,
                     "children": [
                         {"name": "Tensorflow", "size": 531},
-                        {"name": "Pandas", "size": 2418},
+                        {"name": "Pandas", "size": 531},
                         {"name": "Matplotlib", "size": 2418},
                         {"name": "OpenCSV", "size": 2841}
                     ]
@@ -73,9 +76,11 @@ const skillsDataset = {
                     "name": "Excel",
                     "size": 6250,
                     "children": [
+                        {"name": "Formula", "size": 6250},
                         {"name": "VBA", "size": 4812}
                     ]
-                }
+                },
+                {"name": "WebFOCUS", "size": 6250},
             ]
         },
         {
