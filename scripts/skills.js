@@ -36,8 +36,9 @@ const update = () => {
     nodeEnter.append("circle")
                 .attr("r", d => Math.sqrt(d.size) / 10 || 4.5);
     nodeEnter.append("text")
-                .attr("dy", ".35vw")
+                .attr("dy", "1rem")
                 .style('fill', 'black')
+                .style('font-size', '1.6rem')
                 .text(d => d.name);
 
     node.select("circle")
