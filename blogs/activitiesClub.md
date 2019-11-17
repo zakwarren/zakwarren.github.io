@@ -10,6 +10,8 @@ different things that interest me in life. I love getting outside
 and taking part in adventurous activities, so a website for an
 activities club was a perfect fit.
 
+![Activities Club](images/projects/activitiesclub.jpg "Activities Club Website")
+
 I kept it general so I could focus on the "how" of making it as
 opposed to getting bogged down in specific design decisions for a
 niche club. This also meant I could use it as a template for future
