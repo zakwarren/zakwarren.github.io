@@ -41,16 +41,6 @@ img {
     to {top:0; opacity:1}
 }
 
-@media (max-width: 1000px) {
-    .blog-modal {
-        padding-top: 10vw;
-    }
-
-    .blog-content {
-        width: 90%;
-    }
-}
-
 .blog-close {
     float: right;
     font-size: 4vw;
@@ -64,6 +54,14 @@ img {
 }
 
 @media (max-width: 1000px) {
+    .blog-modal {
+        padding-top: 10vw;
+    }
+
+    .blog-content {
+        width: 90%;
+    }
+
     .blog-close {
         font-size: 6vw;
     }
@@ -75,7 +73,7 @@ img {
 
 @media (max-width: 600px) {
     .blog-modal {
-        padding-top: 14vw;
+        padding-top: 18vw;
     }
 
     .blog-content {
