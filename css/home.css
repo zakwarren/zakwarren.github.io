@@ -319,16 +319,16 @@
 
 @media (max-width: 600px) {
     .project {
-        height: 25vw;
-        width: 25vw;
+        height: 26vw;
+        width: 26vw;
     }
 
     .project-image {
-        clip-path: circle(11.5vw at center);
+        clip-path: circle(12vw at center);
     }
 
     .project-image__overlay {
-        clip-path: circle(11.5vw at center);
+        clip-path: circle(12vw at center);
     }
 }
 
@@ -379,14 +379,14 @@
 
 @media (max-width: 600px) {
     .btn {
-        padding-top: 7vw;
+        padding-top: 9vw;
         text-align: center;
-        width: 18vw;
-        height: 18vw;
+        width: 26vw;
+        height: 26vw;
     }
 
     .btn-show-all {
-        margin: 0 41vw;
+        margin: 0 37vw;
         right: auto;
         top: auto;
     }
@@ -411,7 +411,7 @@
 
 @media (max-width: 600px) {
     .about-me {
-        margin: 16vw 0 0.2vw 0;
+        margin: 24vw 0 0.2vw 0;
         flex-direction: column;
     }
 

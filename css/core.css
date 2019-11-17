@@ -85,15 +85,15 @@ a {
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 6vw;
+        font-size: 8vw;
     }
 
     h2 {
-        font-size: 5vw;
+        font-size: 7.5vw;
     }
 
     h3 {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     body,
@@ -101,7 +101,7 @@ a {
     a,
     li,
     text {
-        font-size: 3vw;
+        font-size: 4.5vw;
     }
 }
 
@@ -163,9 +163,9 @@ a {
 
     .nav-list__item {
         margin: 0.5vw 4vw;
-        padding-top: 2vw;
-        width: 12vw;
-        height: 12vw;
+        padding-top: 3.5vw;
+        width: 17vw;
+        height: 17vw;
     }
 
     .main-heading {
