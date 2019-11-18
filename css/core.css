@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 :root {
-    --color-background: #f0f0f0;
+    --color-background: #ffffff;
     --color-block: #000000;
     --color-subtle: rgba(222, 63, 83, 0.1);
     --color-highlight: #daa520;
@@ -9,7 +9,7 @@
     --color-shadow: rgba(0, 0, 0, 0.4);
 
     --color-black: #000000;
-    --color-white: #f0f0f0;
+    --color-white: #ffffff;
     --color-gray: #9aa0a7;
 }
 
