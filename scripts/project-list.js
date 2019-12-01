@@ -8,12 +8,12 @@ const projects = [
         "blog": "blogs/albieAdventures.md"
     },
     {
-        "id": "cashlessCards",
-        "title": "Cashless Cards System",
-        "url": "https://github.com/zakwarren/cashlesscards",
-        "image": "images/projects/cashlesscards.jpg",
-        "alt": "Cashless Cards System",
-        "blog": "blogs/cashlessCards.md"
+        "id": "verbosity",
+        "title": "Verbosity: The Website Word Analyzer",
+        "url": "https://github.com/zakwarren/verbosity",
+        "image": "images/projects/verbosity.jpg",
+        "alt": "Verbosity: The Website Word Analyzer",
+        "blog": "blogs/verbosity.md"
     },
     {
         "id": "movieGenerator",
@@ -22,6 +22,14 @@ const projects = [
         "image": "images/projects/moviegenerator.jpg",
         "alt": "Adam Sandler Movie Generator",
         "blog": "blogs/movieGenerator.md"
+    },
+    {
+        "id": "cashlessCards",
+        "title": "Cashless Cards System",
+        "url": "https://github.com/zakwarren/cashlesscards",
+        "image": "images/projects/cashlesscards.jpg",
+        "alt": "Cashless Cards System",
+        "blog": "blogs/cashlessCards.md"
     },
     {
         "id": "activitiesClub",
