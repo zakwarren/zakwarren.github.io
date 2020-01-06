@@ -389,6 +389,8 @@
 
 .about-section__heading,
 .skills-section__heading {
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
