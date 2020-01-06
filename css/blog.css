@@ -3,12 +3,11 @@ img {
 }
 
 .blog-modal {
-    padding-top: 6vw;
+    padding-top: 5rem;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    border-radius: 1vw;
     z-index: 1;
     position: fixed;
     overflow: auto;
@@ -19,21 +18,14 @@ img {
 .blog-content {
     margin: auto;
     padding: 0;
-    width: 80%;
-    border-radius: 1vw;
-    border: 0.1vw solid var(--color-trim);
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-trim);
     position: relative;
     background-color: var(--color-white);
-    box-shadow: 0 0.4vw 0.8vw 0 var(--color-shadow),0 0.6vw 2vw 0 var(--color-shadow);
-    -webkit-animation-name: modal-animate;
-    -webkit-animation-duration: 0.4s;
+    box-shadow: 0 0.2rem 0.4rem 0 var(--color-shadow),0 0.3rem 1rem 0 var(--color-shadow);
     animation-name: modal-animate;
-    animation-duration: 0.4s
-}
-
-@-webkit-keyframes modal-animate {
-    from {top:-10vw; opacity:0} 
-    to {top:0; opacity:1}
+    animation-duration: 0.4s;
 }
 
 @keyframes modal-animate {
@@ -43,49 +35,25 @@ img {
 
 .blog-close {
     float: right;
-    font-size: 4vw;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--color-white);
     transition: color 0.3s ease-out;
 }
 
 .blog-link {
-    font-size: 2vw;
+    font-size: 1.5rem;
 }
 
-@media (max-width: 1000px) {
-    .blog-modal {
-        padding-top: 10vw;
-    }
-
+@media (min-width: 600px) {
     .blog-content {
         width: 90%;
     }
-
-    .blog-close {
-        font-size: 6vw;
-    }
-
-    .blog-link {
-        font-size: 3vw;
-    }
 }
 
-@media (max-width: 600px) {
-    .blog-modal {
-        padding-top: 18vw;
-    }
-
+@media (min-width: 1000px) {
     .blog-content {
-        width: 100%;
-    }
-
-    .blog-close {
-        font-size: 8vw;
-    }
-
-    .blog-link {
-        font-size: 6vw;
+        width: 80%;
     }
 }
 
@@ -97,16 +65,16 @@ img {
 }
 
 .blog-header {
-    padding: 0.2vw 1.6vw;
-    border-top-left-radius: 1vw;
-    border-top-right-radius: 1vw;
+    padding: 0.1rem 0.8rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     background-color: var(--color-block);
     color: var(--color-white);
 }
 
 .blog-link
 ,.blog-body a {
-    padding: 0.2vw 1.6vw;
+    padding: 0.1rem 0.8rem;
     cursor: pointer;
     text-decoration: underline;
     color: var(--color-highlight);
@@ -120,7 +88,7 @@ img {
 }
 
 .blog-body {
-    padding: 0.2vw 1.6vw;
+    padding: 0.1rem 0.8rem;
 }
 
 .modal-hide {
