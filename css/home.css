@@ -131,7 +131,7 @@
     animation-duration: 11s;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .landing__circles {
         display: block;
     }
@@ -184,7 +184,7 @@
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .landing {
         flex-direction: row;
     }
@@ -232,7 +232,7 @@
     width: 100%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .projects-section {
         width: 44%;
         height: 100vh;
@@ -301,7 +301,7 @@
     cursor: pointer;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .project {
         height: 18vw;
         width: 18vw;
@@ -362,7 +362,7 @@
     transition: transform 0.3s ease-out;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .btn-show-all {
         margin: 0;
         right: 2rem;
@@ -394,7 +394,7 @@
     text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .about-me {
         margin: 0;
         flex-direction: row;

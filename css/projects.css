@@ -11,6 +11,10 @@
     color: var(--color-black);
 }
 
+.projects-section__description {
+    padding: 1rem;
+}
+
 .projects-grid {
     width: 100%;
     display: flex;
@@ -41,7 +45,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .projects-section {
         width: 100%;
     }
@@ -97,7 +101,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .project-title {
         font-size: 4.5vw;
     }
