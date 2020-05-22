@@ -9,9 +9,9 @@
   var notePages = [
     "<p>Hi, I'm Zak!</p>" +
       "<p>I get computers to do interesting things by developing great software. " +
-      "I have a passion for exploring new places, new ideasand solving problems.</p>",
-    "<p>Second page</p><p>Information to display on the second page</p>",
-    "<p>Third page</p>",
+      "I have a passion for exploring new places, new ideas and solving problems.</p>" +
+      "<p>My work has centered around building web apps for wrangling, analyzing, and " +
+      "displaying data. I'm also skilled at creating games.</p>",
   ];
   var pageCounter = 0;
 
@@ -49,4 +49,5 @@
     turnPage(-1);
   });
   displayTurners();
+  firstPageContent.innerHTML = notePages[pageCounter];
 })();
