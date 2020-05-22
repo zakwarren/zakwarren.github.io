@@ -81,9 +81,34 @@ main:before {
   margin: 1rem auto;
   width: 100%;
   color: #de3f53;
-  font-size: 3rem;
   text-align: center;
   text-shadow: 0.12rem 0.12rem 0.12rem #c09c5d;
+}
+
+.main__heading h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.link__list {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contact__link {
+  margin: auto;
+  text-decoration: none;
+  color: #de3f53;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact__link:hover {
+  color: #fff;
 }
 
 .notepad {
@@ -97,7 +122,6 @@ main:before {
     margin: 1rem;
     width: 40%;
     font-size: 4rem;
-    text-align: left;
   }
 
   .notepad {
@@ -112,6 +136,15 @@ main:before {
 @media (min-width: 900px) {
   .main__heading {
     font-size: 8rem;
+    text-align: left;
+  }
+
+  .link__list {
+    justify-content: flex-start;
+  }
+
+  .contact__link {
+    margin: 0 1.5rem;
   }
 
   .notepad {
