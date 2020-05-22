@@ -61,7 +61,7 @@ main:before {
 }
 
 .logo img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 @media (min-width: 500px) {
@@ -73,16 +73,47 @@ main:before {
   .logo img {
     height: 100%;
     max-height: 100%;
+    max-width: 100%;
   }
+}
+
+.main__heading {
+  margin: 1rem auto;
+  width: 100%;
+  color: #de3f53;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 0.12rem 0.12rem 0.12rem #c09c5d;
 }
 
 .notepad {
   position: static;
-  width: 90%;
+  width: 100%;
   max-width: 100%;
 }
 
 @media (min-width: 500px) {
+  .main__heading {
+    margin: 1rem;
+    width: 40%;
+    font-size: 4rem;
+    text-align: left;
+  }
+
+  .notepad {
+    width: 20%;
+    position: absolute;
+    right: 30%;
+    bottom: 10%;
+    transform: rotate(20deg);
+  }
+}
+
+@media (min-width: 900px) {
+  .main__heading {
+    font-size: 8rem;
+  }
+
   .notepad {
     width: 20%;
     position: absolute;
