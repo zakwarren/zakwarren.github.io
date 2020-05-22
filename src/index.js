@@ -30,15 +30,13 @@
   }
 
   function displayTurners() {
+    foreBtn.style.display = "block";
+    backBtn.style.display = "block";
     if (pageCounter === 0) {
       backBtn.style.display = "none";
-      foreBtn.style.display = "block";
-    } else if (pageCounter === notePages.length - 1) {
+    }
+    if (pageCounter === notePages.length - 1) {
       foreBtn.style.display = "none";
-      backBtn.style.display = "block";
-    } else {
-      foreBtn.style.display = "block";
-      backBtn.style.display = "block";
     }
   }
 
