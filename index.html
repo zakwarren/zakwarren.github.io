@@ -57,14 +57,32 @@
       </header>
       <section class="notepad">
         <div class="page">
-          <p>Hi, I'm Zak!</p>
-          <p>
-            I get computers to do interesting things by developing great
-            software. I have a passion for exploring new places, new ideas and
-            solving problems.
-          </p>
+          <i
+            id="foreBtn"
+            class="page__turn__fore fas fa-chevron-circle-right"
+          ></i>
+          <i
+            id="backBtn"
+            class="page__turn__back fas fa-chevron-circle-left"
+          ></i>
+          <div id="firstPage" class="page__inner">
+            <div id="firstPageContent" class="page__front">
+              <p>Hi, I'm Zak!</p>
+              <p>
+                I get computers to do interesting things by developing great
+                software. I have a passion for exploring new places, new ideas
+                and solving problems.
+              </p>
+            </div>
+            <div class="page__back"></div>
+          </div>
+          <div id="nextPage" class="page__inner">
+            <div id="nextPageContent" class="page__front"></div>
+            <div class="page__back"></div>
+          </div>
         </div>
       </section>
     </main>
+    <script src="src/index.js"></script>
   </body>
 </html>
