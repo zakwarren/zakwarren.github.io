@@ -12,70 +12,13 @@ body {
 
 html {
   font-size: 16px;
-  overflow-y: hidden;
-}
-
-.toolbar {
-  padding: 0 1.25rem;
-  width: 100%;
-  height: 3.5rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  background-color: transparent;
-  color: #de3f53;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.toolbar nav {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.nav__desktop {
-  height: 100%;
-  display: none;
+  overflow-y: auto;
 }
 
 @media (min-width: 500px) {
-  .nav__desktop {
-    display: block;
+  html {
+    overflow-y: hidden;
   }
-}
-
-.toolbar .toolbar__logo {
-  height: 80%;
-}
-
-.logo {
-  height: 100%;
-  max-height: 100%;
-}
-
-.nav__item__list {
-  margin: 0 auto;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav__item {
-  padding: 0.5rem;
-  height: 100%;
-  color: #de3f53;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.nav__item:hover {
-  border-bottom: 0.5rem solid #de3f53;
 }
 
 main {
@@ -95,7 +38,7 @@ main:after {
   height: 2.8rem;
   position: absolute;
   bottom: -0.9rem;
-  left: -31rem;
+  left: 0;
   display: block;
   background-image: url("/assets/torn_edge.png");
 }
@@ -110,4 +53,78 @@ main:before {
   z-index: 1;
   display: block;
   background-image: url("/assets/torn_edge.png");
+}
+
+.logo {
+  margin: auto;
+  text-align: center;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+@media (min-width: 500px) {
+  .logo {
+    height: 40%;
+    text-align: left;
+  }
+
+  .logo img {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+
+.notepad {
+  position: static;
+  width: 90%;
+  max-width: 100%;
+}
+
+@media (min-width: 500px) {
+  .notepad {
+    width: 20%;
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    transform: rotate(20deg);
+  }
+}
+
+.notepad .page {
+  margin: 1.6rem auto 0;
+  padding: 1.5rem;
+  width: 15rem;
+  max-width: 40rem;
+  min-height: 25rem;
+  position: relative;
+  z-index: 5;
+  background: #dbd7ca;
+  box-shadow: 0 0 0.6rem #0000004d;
+}
+
+.notepad .page:before,
+.notepad .page:after {
+  content: "";
+  width: 100%;
+  height: 98%;
+  position: absolute;
+  z-index: -1;
+}
+
+.notepad .page:before {
+  left: -0.3rem;
+  top: 0.25rem;
+  background: #fafafa;
+  box-shadow: 0 0 0.5rem #00000033;
+  transform: rotate(-2.5deg);
+}
+
+.notepad .page:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.2);
+  right: -0.2rem;
+  top: 0.06rem;
+  transform: rotate(1.4deg);
 }
