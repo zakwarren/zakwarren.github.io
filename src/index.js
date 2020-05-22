@@ -49,3 +49,7 @@
   displayTurners();
   firstPageContent.innerHTML = notePages[pageCounter];
 })();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js");
+}
