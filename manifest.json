@@ -18,8 +18,8 @@
   "scope": ".",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#fff",
-  "theme_color": "#de3f53",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
   "dir": "ltr",
   "lang": "en-GB"
 }

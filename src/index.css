@@ -37,7 +37,7 @@ main:after {
   width: 100%;
   height: 2.8rem;
   position: absolute;
-  bottom: -0.9rem;
+  bottom: -0.5rem;
   left: 0;
   display: block;
   background-image: url("/assets/torn_edge.png");
@@ -80,7 +80,7 @@ main:before {
 .main__heading {
   margin: 1rem auto;
   width: 100%;
-  color: #de3f53;
+  color: #000;
   text-align: center;
   text-shadow: 0.12rem 0.12rem 0.12rem #c09c5d;
 }
@@ -101,7 +101,7 @@ main:before {
 .contact__link {
   margin: auto;
   text-decoration: none;
-  color: #de3f53;
+  color: #000;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
