@@ -1,0 +1,25 @@
+{
+  "name": "Zak Warren",
+  "short_name": "zakwarren",
+  "description": "The personal website of Zak Warren; developer, scientist, explorer",
+  "icons": [
+    {
+      "src": "/assets/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff",
+  "theme_color": "#de3f53",
+  "dir": "ltr",
+  "lang": "en-GB"
+}

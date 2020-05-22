@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakwarren/zakwarren.github.io.git"
+  },
+  "author": "Zak Warren",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/zakwarren/zakwarren.github.io/issues"
+  },
+  "homepage": "https://zakwarren.github.io/",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
