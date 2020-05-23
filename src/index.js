@@ -50,6 +50,28 @@
   firstPageContent.innerHTML = notePages[pageCounter];
 })();
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js");
-}
+(function () {
+  var linkDownload = document.getElementById("linkDownload");
+  var deferredPrompt;
+
+  function install() {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt = null;
+      linkDownload.style.display = "none";
+    }
+  }
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js");
+  }
+
+  window.addEventListener("beforeinstallprompt", function (event) {
+    event.preventDefault();
+    deferredPrompt = event;
+
+    linkDownload.style.display = "block";
+    linkDownload.addEventListener("click", install);
+    return false;
+  });
+})();
