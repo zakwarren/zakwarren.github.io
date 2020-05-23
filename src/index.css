@@ -169,6 +169,7 @@ main:before {
   perspective: 62.5rem;
   background-color: #dbd7ca;
   box-shadow: 0 0 0.6rem #0000004d;
+  cursor: default;
 }
 
 .notepad .page:before,
