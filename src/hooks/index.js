@@ -1,1 +1,0 @@
-export { useInstaller } from "./useInstaller";
