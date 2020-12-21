@@ -1,10 +1,10 @@
 {
-  "private": true,
   "name": "website",
   "version": "1.0.0",
   "description": "My personal website",
   "author": "Zak Warren",
   "license": "UNLICENSED",
+  "private": true,
   "homepage": "https://zakwarren.github.io/",
   "scripts": {
     "start": "preact watch",
@@ -52,5 +52,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zakwarren/zakwarren.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zakwarren/zakwarren.github.io/issues"
   }
 }
