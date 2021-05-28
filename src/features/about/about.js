@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import * as css from "./about.module.css";
 
@@ -17,6 +19,14 @@ const About = () => (
         analyzing, and displaying data.
       </p>
       <p>I can help you stand out in a sea of ordinary.</p>
+      <a
+        href="https://github.com/zakwarren"
+        target="_blank"
+        rel="noreferrer"
+        className={css.link}
+      >
+        <FontAwesomeIcon icon={faGithub} size="2x" fixedWidth />
+      </a>
     </div>
   </>
 );

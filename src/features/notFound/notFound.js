@@ -8,7 +8,9 @@ const NotFound = () => (
     <h1 className={css.strapLine}>Page Not Found</h1>
     <div className={css.notFound}>
       <p>This page doesn't exist!</p>
-      <Link to="/">Go home</Link>
+      <Link to="/" className={css.link}>
+        Go home
+      </Link>
     </div>
   </>
 );

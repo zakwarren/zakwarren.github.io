@@ -16,9 +16,16 @@
   top: 20vh;
   color: #f2f5ff;
   color: var(--white);
+  text-shadow: #534d41 0 0 0.12rem;
+  -webkit-font-smoothing: antialiased;
   font-family: "Titillium Web", "Open Sans", sans-serif;
   font-size: 2rem;
   text-align: center;
+}
+
+.link:hover * {
+  fill: #de3f53;
+  fill: var(--theme);
 }
 
 @media (min-width: 750px) {
