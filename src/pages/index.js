@@ -1,16 +1,18 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 
 import Head from "../features/head";
 import App from "../features/app";
 
 const IndexPage = () => {
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (let registration of registrations) {
-        registration.unregister();
-      }
-    });
-  }
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then((regs) => {
+        for (let reg of regs) {
+          reg.unregister();
+        }
+      });
+    }
+  });
 
   return (
     <>
