@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "My personal website",
+  "description": "The personal website of Zak Warren, Software Engineer Extraordinaire",
   "author": "Zak Warren",
   "license": "UNLICENSED",
   "private": true,
@@ -13,8 +13,9 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@astrojs/renderer-preact": "^0.3.2",
     "astro": "^0.21.13",
-    "@astrojs/renderer-preact": "^0.3.2"
+    "prettier-plugin-astro": "^0.0.11"
   },
   "repository": {
     "type": "git",
