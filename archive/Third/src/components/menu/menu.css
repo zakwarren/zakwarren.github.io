@@ -1,0 +1,140 @@
+.menu {
+  position: fixed;
+  top: 10vh;
+  left: 20vw;
+  z-index: 200;
+}
+
+@media (min-width: 750px) {
+  .menu {
+    left: 10vw;
+  }
+}
+
+.menuToggler {
+  margin: auto;
+  width: 8vh;
+  height: 8vh;
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.menuToggler + label {
+  margin: auto;
+  width: 8vh;
+  height: 8vh;
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+  z-index: 1;
+  background-color: #f2f5ff;
+  background-color: var(--white);
+  background: url("/assets/icons/android-icon-192x192.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s;
+}
+
+.menuToggler:checked + label {
+  background-color: #f2f5ff;
+  background-color: var(--white);
+}
+
+.menuToggler:hover + label {
+  background-color: #ea8592;
+  background-color: var(--theme-light);
+}
+
+.menuToggler:checked ~ ul .menuItem {
+  opacity: 1;
+}
+.menuToggler:checked ~ ul .menuItem:nth-child(1) {
+  transform: rotate(0deg) translate(-110px);
+}
+.menuToggler:checked ~ ul .menuItem:nth-child(2) {
+  transform: rotate(60deg) translateX(-110px);
+}
+.menuToggler:checked ~ ul .menuItem:nth-child(3) {
+  transform: rotate(120deg) translateX(-110px);
+}
+.menuToggler:checked ~ ul .menuItem:nth-child(4) {
+  transform: rotate(180deg) translateX(-110px);
+}
+.menuToggler:checked ~ ul .menuItem:nth-child(5) {
+  transform: rotate(240deg) translateX(-110px);
+}
+.menuToggler:checked ~ ul .menuItem:nth-child(6) {
+  transform: rotate(300deg) translateX(-110px);
+}
+.menuToggler:checked ~ ul .menuItem a {
+  pointer-events: auto;
+}
+
+.menuItem:nth-child(1) a {
+  transform: rotate(0deg);
+}
+.menuItem:nth-child(2) a {
+  transform: rotate(-60deg);
+}
+.menuItem:nth-child(3) a {
+  transform: rotate(-120deg);
+}
+.menuItem:nth-child(4) a {
+  transform: rotate(-180deg);
+}
+.menuItem:nth-child(5) a {
+  transform: rotate(-240deg);
+}
+.menuItem:nth-child(6) a {
+  transform: rotate(-300deg);
+}
+
+.menuItem {
+  margin: auto;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: -3rem;
+  left: -1rem;
+  opacity: 0;
+  display: block;
+  transition: 0.5s;
+}
+
+.menuItem a {
+  width: inherit;
+  height: inherit;
+  background-color: #f2f5ff;
+  background-color: var(--white);
+  border: 0.1rem solid #de3f53;
+  border-color: var(--theme);
+  border-radius: 50%;
+  color: #f2f5ff;
+  color: var(--white);
+  font-size: 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  line-height: 5rem;
+  display: block;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.menuItem a:hover {
+  background-color: #ea8592;
+  background-color: var(--theme-light);
+  border: none;
+  box-shadow: 0 0 0 2px #ea8592;
+  box-shadow: 0 0 0 2px var(--theme-light);
+  color: white;
+  font-size: 2.8rem;
+}

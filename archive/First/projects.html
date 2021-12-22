@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A selection of Zak's personal software development projects and games">
+    <title>Zak!</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/core.css" />
+    <link rel="stylesheet" type="text/css" href="css/projects.css" />
+    <link rel="stylesheet" type="text/css" href="css/blog.css" />
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+        crossorigin="anonymous"
+    />
+
+</head>
+<body>
+
+    <header id="page-header" class="page-header">
+        <h1 class="main-heading">Zak Warren</h1>
+        <nav id="navbar" class="nav">
+            <ul class="nav-list">
+                <li class="nav-list__item"><a href="index.html">Home</a></li>
+                <li class="nav-list__item"><a href="index.html#about">About</a></li>
+                <li class="nav-list__item"><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projects" class="projects-section">
+        <h2 class="projects-section__heading">Projects</h2>
+        <p class="projects-section__description">
+            Find out about some of my side projects below. I use these as
+            a way to learn something new or experiment with a new technique
+            and, hopefully, make something fun or useful in the process.
+        </p>
+
+        <div id="keyProjects" class="projects-grid"></div>
+
+        <div id="blogModal" class="blog-modal modal-hide">
+            <div class="blog-content">
+                <div class="blog-header">
+                    <span id="blogClose" class="blog-close">&times;</span>
+                    <h2 id="blogHeading" class="blog-heading"></h2>
+                </div>
+                <div class="blog-body">
+                    <a id="blogLink" class="blog-link" href="#" target="_blank">Check it out here</a>
+                    <div id="blogBody"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="contact-footer">
+        <div class="contact-footer__links">
+            <a
+                id="profile-link__github"
+                class="contact-details"
+                href="https://github.com/zakwarren"
+                target="_blank"
+            >
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a
+                id="profile-link__play"
+                class="contact-details"
+                href="https://play.google.com/store/apps/developer?id=Apps+for+Adventure"
+                target="_blank"
+            >
+                <i class="fab fa-android"></i> Play Store
+            </a>
+        </div>
+        <p>&copy; Zak Warren 2020</p>
+    </footer>
+
+    <script src="scripts/project-list.js"></script>
+    <script src="scripts/display-projects.js"></script>
+    <script>
+        const projectsToDisplay = projects.length;
+        displayProjects(projects, projectGrid, projectsToDisplay);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.0/dist/showdown.min.js"></script>
+    <script src="scripts/display-writeup.js"></script>
+
+</body>
+</html>
