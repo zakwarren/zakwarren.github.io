@@ -1,0 +1,56 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Hero from "../components/Hero.astro";
+import Navigation from "../components/Navigation.astro";
+
+const title = "Zak Warren";
+const description =
+  "Zak Warren, Software Engineer Extraordinaire, creates amazing applications.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} />
+    <style>
+      section {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+
+      .hero-primary {
+        margin-left: 1rem;
+        font-size: 2rem;
+        color: white;
+      }
+
+      @media (min-width: 768px) {
+        .hero-primary {
+          position: absolute;
+          top: 10%;
+          left: 10%;
+        }
+      }
+
+      .hero-primary h1,
+      .hero-primary h3 {
+        margin: 0.1rem;
+        margin-top: 0;
+        color: inherit;
+      }
+    </style>
+  </head>
+
+  <body>
+    <Hero>
+      <Navigation />
+      <div class="hero-primary">
+        <h1>Software Engineer Extraordinaire</h1>
+        <h3>Zak Warren</h3>
+      </div>
+    </Hero>
+    <section></section>
+  </body>
+</html>
