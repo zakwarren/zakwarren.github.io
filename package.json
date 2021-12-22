@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "author": "Zak Warren",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://zakwarren.github.io/",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.21.13",
+    "@astrojs/renderer-preact": "^0.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakwarren/zakwarren.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zakwarren/zakwarren.github.io/issues"
+  }
+}
