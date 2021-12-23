@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Hero from "../components/Hero.astro";
+import Navigation from "../components/Navigation.astro";
 
 const title = "Oops!";
 const description = "You're lost! Let me help you get back on track.";
@@ -55,6 +56,7 @@ const description = "You're lost! Let me help you get back on track.";
 
   <body>
     <Hero>
+      <Navigation />
       <div class="hero-404">
         <h1>Oops!</h1>
         <p>The page you're looking for isn't here or doesn't exist.</p>
