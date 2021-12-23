@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Hero from "../components/Hero.astro";
 import Navigation from "../components/Navigation.astro";
-import { Scalable } from "../components/home/Scalable.jsx";
+import Scalable from "../components/home/Scalable.astro";
 
 const title = "Zak Warren";
 const description =
@@ -28,19 +28,7 @@ const description =
       </div>
     </Hero>
     <section class="row">
-      <div>
-        <h2>More experience than you can shake a stick at</h2>
-        <p>
-          I've had the privilege to work in a range of companies in varied
-          industries. I've created quality software aimed at wildly different
-          audiences, from a single user to millions of concurrent users. This is
-          why I create software that is scalable, secure, and robust.
-        </p>
-        <p>I can help you stand out in a sea of ordinary.</p>
-      </div>
-      <div>
-        <Scalable client:visible />
-      </div>
+      <Scalable />
     </section>
   </body>
 </html>

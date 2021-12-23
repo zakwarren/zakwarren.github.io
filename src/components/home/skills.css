@@ -1,0 +1,108 @@
+#skills-graph {
+  margin: 1rem 1rem;
+  padding: 0;
+  width: 100%;
+  height: 20rem;
+  display: block;
+  position: relative;
+  background: transparent;
+  font-size: 0.8rem;
+}
+
+#skills-graph tr,
+#skills-graph th,
+#skills-graph td {
+  margin: 0;
+  padding: 0;
+  width: clamp(2rem, 10%, 4rem);
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+}
+
+#skills-graph td {
+  transition: all 0.3s ease;
+}
+#skills-graph td:hover {
+  background-color: var(--highlight);
+  color: white;
+  opacity: 0.9;
+}
+
+#skills-graph thead tr {
+  margin: -2.5em 0 0 5em;
+  left: 100%;
+  top: 50%;
+  bottom: auto;
+}
+
+#skills-graph thead th {
+  padding: 0.5em 1em;
+  width: 7.5em;
+  height: auto;
+}
+
+#skills-graph thead th.skill {
+  top: 0;
+  left: 0;
+  line-height: 2;
+}
+
+#skills-graph tbody tr {
+  padding-top: 0.1rem;
+  height: 20rem;
+  border-right: 1px dotted var(--grey);
+  color: white;
+}
+
+#skills-graph tbody th {
+  bottom: -1.75em;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+#skills-graph .bar {
+  width: clamp(3.2rem, 10%, 5rem);
+  border: 1px solid;
+  border-bottom: none;
+}
+
+#skills-graph .bar p {
+  margin: 0.2rem 0 0;
+  padding: 0;
+  color: white;
+}
+
+#skills-graph .skill {
+  left: 0.7rem;
+  background-color: var(--primary);
+  border-color: transparent;
+}
+
+#skills-graph td:hover p {
+  color: var(--grey);
+}
+
+#ticks {
+  margin-bottom: -20rem;
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  top: -18.75rem;
+  left: 2rem;
+  z-index: 1;
+  font-size: 0.6rem;
+}
+
+#ticks .tick {
+  width: 100%;
+  position: relative;
+}
+
+#ticks .tick p {
+  margin: 0 0 0 0.5em;
+  position: absolute;
+  left: -5em;
+  top: -0.8em;
+}
