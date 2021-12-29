@@ -38,7 +38,17 @@ section {
 }
 
 .scale-section {
-  margin-bottom: 60vh;
+  margin-bottom: 80vh;
+}
+
+.leader-section {
+  margin-bottom: 50vh;
+}
+
+@media (min-width: 450px) {
+  .scale-section {
+    margin-bottom: 60vh;
+  }
 }
 
 @media (min-width: 768px) {
@@ -74,6 +84,10 @@ section {
 
   .scale-section {
     margin-bottom: 35vh;
+  }
+
+  .leader-section {
+    margin-bottom: 10rem;
   }
 }
 

@@ -1,5 +1,10 @@
+.skills-container {
+  height: 25rem;
+  overflow-x: auto;
+}
+
 #skills-graph {
-  margin: 1rem 1rem;
+  margin: 1rem 0;
   padding: 0;
   width: 100%;
   height: 20rem;
@@ -25,7 +30,7 @@
   transition: all 0.3s ease;
 }
 #skills-graph td:hover {
-  background-color: var(--highlight);
+  background-color: var(--secondary);
   color: white;
   opacity: 0.9;
 }
@@ -52,7 +57,6 @@
 #skills-graph tbody tr {
   padding-top: 0.1rem;
   height: 20rem;
-  border-right: 1px dotted var(--grey);
   color: white;
 }
 
@@ -80,17 +84,13 @@
   border-color: transparent;
 }
 
-#skills-graph td:hover p {
-  color: var(--grey);
-}
-
 #ticks {
   margin-bottom: -20rem;
   width: 100%;
   height: 20rem;
   position: relative;
   top: -18.75rem;
-  left: 2rem;
+  left: 0;
   z-index: 1;
   font-size: 0.6rem;
 }
@@ -103,6 +103,6 @@
 #ticks .tick p {
   margin: 0 0 0 0.5em;
   position: absolute;
-  left: -5em;
+  left: -1em;
   top: -0.8em;
 }

@@ -10,7 +10,7 @@ const data = [
   { skill: "HTML", time: 10 },
   { skill: "SQL Server", time: 10 },
   { skill: "Mongo DB", time: 6 },
-  { skill: "Docker & K8s", time: 3 },
+  { skill: "Docker & K8s", time: 4 },
 ];
 const maxTime = Math.max(...data.map((d) => d.time));
 const pxHeight = 28;
@@ -18,7 +18,7 @@ const pxLeft = 62;
 
 export const Skills = () => {
   return (
-    <>
+    <div className="skills-container">
       <table id="skills-graph">
         <tbody>
           {data.map((d, i) => (
@@ -34,15 +34,15 @@ export const Skills = () => {
         </tbody>
       </table>
 
-      <div id="ticks">
+      {/* <div id="ticks">
         {[...Array(maxTime + 1).keys()]
           .sort((a, b) => b - a)
           .map((t) => (
             <div key={t} className="tick" style={`height: ${pxHeight}px;`}>
-              <p>{t} years</p>
+              <p>{t}</p>
             </div>
           ))}
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 };

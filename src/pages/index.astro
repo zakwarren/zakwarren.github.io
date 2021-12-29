@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation.astro";
 import Scalable from "../components/home/Scalable.astro";
 import Leadership from "../components/home/Leadership.astro";
 import Mentoring from "../components/home/Mentoring.astro";
+import Skills from "../components/home/Skills.astro";
 
 const title = "Zak Warren";
 const description =
@@ -33,33 +34,14 @@ const description =
     <section class="row scale-section">
       <Scalable />
     </section>
-    <section class="row">
+    <section class="row leader-section">
       <Leadership />
     </section>
-    <section class="row">
+    <section class="row mentor-section">
       <Mentoring />
     </section>
-    <section class="row">
-      <div>
-        <h2>Skills</h2>
-        <!-- <Skills /> -->
-        <p>
-          I'm a highly skilled and experienced full stack software developer.
-          The chart above shows my main skills but I'm a quick and efficient
-          learner, and a firm believer in using the best tool for the job.
-          During my career I've made use of a variety of other technologies,
-          based on business need, project requirements, what my colleagues have
-          skills in, and what is available at the time. A few examples of these
-          include:
-        </p>
-        <ul>
-          <li>Linux Servers and Bash</li>
-          <li>Python</li>
-          <li>Powershell</li>
-          <li>SQL Server Reporting Services (SSRS)</li>
-          <li>WebFOCUS</li>
-        </ul>
-      </div>
+    <section class="row skills-section">
+      <Skills />
     </section>
   </body>
 </html>
