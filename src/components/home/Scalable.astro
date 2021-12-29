@@ -7,8 +7,6 @@ import {
   faCloud,
   faServer,
 } from "@fortawesome/free-solid-svg-icons";
-
-import { Skills } from "./Skills.jsx";
 ---
 
 <div>
@@ -16,28 +14,22 @@ import { Skills } from "./Skills.jsx";
   <p>
     I've had the privilege to work in a range of companies in varied industries.
     I've created outstanding software aimed at wildly different audiences, from
-    a single user to millions of concurrent users. This is why I create software
-    that is scalable, secure, and robust.
+    a single user to millions of concurrent users.
   </p>
-  <Skills />
   <p>
-    I'm a highly skilled and experienced full stack software developer. The
-    chart above shows my main skills but I'm a quick and efficient learner, and
-    a firm believer in using the best tool for the job. During my career I've
-    made use of a variety of other technologies, based on business need, project
-    requirements, what my colleagues have skills in, and what is available at
-    the time. A few examples of these include:
+    Throughout the numerous projects I've worked on, I've gained experience in
+    designing and implementing a wide variety of different architectures. I
+    embrace building modular components that are reusable, extensible, and easy
+    to test.
   </p>
-  <ul>
-    <li>Linux Servers and Bash</li>
-    <li>Python</li>
-    <li>Powershell</li>
-    <li>SQL Server Reporting Services (SSRS)</li>
-    <li>WebFOCUS</li>
-  </ul>
-  <p>I can help you stand out in a sea of ordinary.</p>
+  <p>
+    Often the most difficult question to answer is "What do you want to see and
+    do?". So during design and development I work with users to figure out what
+    they need.
+  </p>
+  <p>This is why I create software that is scalable, secure, and robust.</p>
 </div>
-<div id="scalable">
+<div id="scalable" class="diagram">
   <div class="multiple">
     <FontAwesomeIcon class="icon" fixedWidth icon={faDesktop} />
     <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faTabletScreenButton}
@@ -51,18 +43,18 @@ import { Skills } from "./Skills.jsx";
   <div class="multiple">
     <FontAwesomeIcon class="icon" fixedWidth icon={faServer} />
     <FontAwesomeIcon
-      class="icon to-appear appear-late"
+      class="icon server-to-appear server-appear-late"
       fixedWidth
       icon={faServer}
     />
-    <FontAwesomeIcon class="icon to-appear" fixedWidth icon={faServer} />
+    <FontAwesomeIcon class="icon server-to-appear" fixedWidth icon={faServer} />
     <FontAwesomeIcon class="icon" fixedWidth icon={faServer} />
   </div>
 </div>
 
 <script>
-  const appears = document.getElementsByClassName("to-appear");
-  const animate = (entries) => {
+  const serversAppears = document.getElementsByClassName("server-to-appear");
+  const animateServers = (entries) => {
     let shouldAnimate = false;
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -70,86 +62,38 @@ import { Skills } from "./Skills.jsx";
       }
     });
     if (shouldAnimate) {
-      for (let i = 0; i < appears.length; i++) {
-        appears[i].classList.add("appear");
+      for (let i = 0; i < serversAppears.length; i++) {
+        serversAppears[i].classList.add("server-appear");
       }
     } else {
-      for (let i = 0; i < appears.length; i++) {
-        appears[i].classList.remove("appear");
+      for (let i = 0; i < serversAppears.length; i++) {
+        serversAppears[i].classList.remove("server-appear");
       }
     }
   };
 
-  const observer = new IntersectionObserver(animate);
-  observer.observe(document.getElementById("scalable"));
+  const scalableObserver = new IntersectionObserver(animateServers);
+  scalableObserver.observe(document.getElementById("scalable"));
 </script>
 
 <style>
-  #scalable {
-    margin-top: 5rem;
-    --width: 3rem;
-  }
-
-  @media (min-width: 768px) {
-    #scalable {
-      --width: 3.5rem;
-    }
-  }
-
-  @media (min-width: 1025px) {
-    #scalable {
-      --width: 7rem;
-    }
-  }
-
-  .icon {
-    margin: 0 1rem;
-    max-width: var(--width);
-    border-radius: 0.2rem;
-    transition: all ease 1s;
-  }
-
-  .icon::before {
-    background-color: transparent;
-  }
-
-  .icon-md {
-    max-width: clamp(2rem, 2.5rem, 5rem);
-  }
-
-  .icon-sm {
-    max-width: clamp(1rem, 2rem, 3rem);
-  }
-
-  .center {
-    margin: 4rem auto;
-    text-align: center;
-  }
-
-  .multiple {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .to-appear {
+  .server-to-appear {
     width: 0;
     opacity: 0;
   }
 
-  .appear {
-    animation-name: flyon;
+  .server-appear {
+    animation-name: server-load;
     animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
   }
 
-  .appear-late {
+  .server-appear-late {
     animation-delay: 1.5s;
   }
 
-  @keyframes flyon {
+  @keyframes server-load {
     0% {
       margin-top: 10rem;
       width: 0;

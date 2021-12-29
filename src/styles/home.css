@@ -1,7 +1,7 @@
 section {
   margin: 0;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   position: relative;
 }
 
@@ -19,15 +19,10 @@ section {
   color: inherit;
 }
 
-.hero-secondary {
-  width: 90%;
-  position: absolute;
-  bottom: 5%;
-  left: 0;
-}
-
+.hero-primary p,
 .hero-secondary p {
   color: inherit;
+  width: 100%;
 }
 
 .row {
@@ -39,6 +34,11 @@ section {
 .row > div {
   margin: 1rem 1rem;
   width: 100%;
+  max-width: 100vw;
+}
+
+.scale-section {
+  margin-bottom: 60vh;
 }
 
 @media (min-width: 768px) {
@@ -46,6 +46,18 @@ section {
     position: absolute;
     top: 10%;
     left: 10%;
+  }
+
+  .hero-primary p {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+
+  .hero-secondary {
+    width: 90%;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
   }
 
   .hero-secondary p {
@@ -59,4 +71,62 @@ section {
   .row > div {
     width: 50%;
   }
+
+  .scale-section {
+    margin-bottom: 35vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  .scale-section {
+    margin-bottom: 10rem;
+  }
+}
+
+.diagram {
+  margin-top: 5rem;
+  --width: 3rem;
+}
+
+@media (min-width: 768px) {
+  .diagram {
+    --width: 3.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .diagram {
+    --width: 7rem;
+  }
+}
+
+.icon {
+  margin: 0 1rem;
+  max-width: var(--width);
+  border-radius: 0.2rem;
+  transition: all ease 1s;
+}
+
+.icon::before {
+  background-color: transparent;
+}
+
+.icon-md {
+  max-width: clamp(2rem, 2.5rem, 5rem);
+}
+
+.icon-sm {
+  max-width: clamp(1rem, 2rem, 3rem);
+}
+
+.center {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.multiple {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 }

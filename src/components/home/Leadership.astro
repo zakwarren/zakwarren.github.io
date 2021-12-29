@@ -1,0 +1,131 @@
+---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUserAstronaut,
+  faUser,
+  faUserPlus,
+} from "@fortawesome/free-solid-svg-icons";
+---
+
+<div>
+  <h2>Creating the path</h2>
+  <p>
+    The way we organise ourselves is just as important as the way we organise
+    our systems and our code. When leading I've found that small, highly
+    collaborative teams are the most effective.
+  </p>
+  <p>
+    I encourage conversations in my team, listening to all ideas, taking advice,
+    and having open discussions about the way forward.
+  </p>
+  <p>
+    All the teams that I have led have increased the speed, quality, and
+    ambition of their work. This is all while feeling positive and that their
+    work makes a real difference.
+  </p>
+</div>
+<div id="leadership" class="diagram">
+  <div class="center">
+    <FontAwesomeIcon
+      id="leader"
+      class="icon leader-to-appear"
+      fixedWidth
+      icon={faUserAstronaut}
+    />
+  </div>
+  <div class="multiple">
+    <FontAwesomeIcon class="icon team" fixedWidth icon={faUser} />
+    <FontAwesomeIcon class="icon team" fixedWidth icon={faUser} />
+    <FontAwesomeIcon class="icon team" fixedWidth icon={faUser} />
+    <FontAwesomeIcon class="icon team" fixedWidth icon={faUser} />
+    <FontAwesomeIcon
+      class="icon team-upgraded team-hidden"
+      fixedWidth
+      icon={faUserPlus}
+    />
+    <FontAwesomeIcon
+      class="icon team-upgraded team-hidden"
+      fixedWidth
+      icon={faUserPlus}
+    />
+    <FontAwesomeIcon
+      class="icon team-upgraded team-hidden"
+      fixedWidth
+      icon={faUserPlus}
+    />
+    <FontAwesomeIcon
+      class="icon team-upgraded team-hidden"
+      fixedWidth
+      icon={faUserPlus}
+    />
+  </div>
+</div>
+
+<script>
+  const leader = document.getElementById("leader");
+  const team = document.getElementsByClassName("team");
+  const teamUpgraded = document.getElementsByClassName("team-upgraded");
+
+  const animateLeader = (entries) => {
+    let shouldAnimate = false;
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        shouldAnimate = true;
+      }
+    });
+    if (shouldAnimate) {
+      leader.classList.add("leader-appear");
+    } else {
+      leader.classList.remove("leader-appear");
+
+      for (let i = 0; i < team.length; i++) {
+        team[i].classList.remove("team-hidden");
+      }
+      for (let i = 0; i < teamUpgraded.length; i++) {
+        teamUpgraded[i].classList.add("team-hidden");
+      }
+    }
+  };
+
+  const leadershipObserver = new IntersectionObserver(animateLeader);
+  leadershipObserver.observe(document.getElementById("leadership"));
+
+  leader.addEventListener("animationend", () => {
+    for (let i = 0; i < team.length; i++) {
+      team[i].classList.add("team-hidden");
+    }
+    for (let i = 0; i < teamUpgraded.length; i++) {
+      teamUpgraded[i].classList.remove("team-hidden");
+    }
+  });
+</script>
+
+<style>
+  .leader-to-appear {
+    opacity: 0;
+  }
+
+  .leader-appear {
+    animation-name: leader-arrive;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes leader-arrive {
+    0% {
+      margin-top: -10rem;
+      margin-bottom: 10rem;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0;
+      margin-bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  .team-hidden {
+    display: none;
+  }
+</style>
