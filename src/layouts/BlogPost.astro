@@ -1,0 +1,33 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import BlogHeader from "../components/BlogHeader.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    heading: string;
+    category: string;
+    publishDate: string;
+  };
+}
+
+const { content } = Astro.props;
+const { title, description, heading, category, publishDate } = content;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} />
+    <link rel="stylesheet" href={Astro.resolve("../styles/blog.css")} />
+  </head>
+
+  <body>
+    <BlogHeader {heading} {category} {publishDate} />
+    <BlogPost>
+      <slot />
+    </BlogPost>
+  </body>
+</html>

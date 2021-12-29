@@ -1,0 +1,19 @@
+---
+import Navigation from "./Navigation.astro";
+
+export interface Props {
+  heading: string;
+  category: string;
+  publishDate: string;
+}
+
+const { heading, category, publishDate } = Astro.props;
+---
+
+<header class="blog-header">
+  <Navigation />
+  <img class="blog-banner" src="/assets/blog-banner.jpg" alt="blog banner" />
+  <h1 class="blog-heading">{heading}</h1>
+  <span class="blog-category">{category}</span>
+  <time class="blog-date">{publishDate}</time>
+</header>
