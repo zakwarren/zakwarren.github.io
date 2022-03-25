@@ -10,15 +10,16 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "prettier -w ."
   },
   "devDependencies": {
-    "@astrojs/renderer-preact": "^0.3.2",
-    "@fortawesome/fontawesome-svg-core": "^1.3.0-beta3",
+    "@astrojs/renderer-preact": "^0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.0.0-beta3",
     "@fortawesome/react-fontawesome": "^0.1.16",
-    "astro": "^0.21.13",
-    "prettier-plugin-astro": "^0.0.11"
+    "astro": "^0.24.3",
+    "prettier-plugin-astro": "^0.0.12"
   },
   "repository": {
     "type": "git",

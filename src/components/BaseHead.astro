@@ -33,4 +33,7 @@ const { title, description } = Astro.props;
 />
 <meta name="msapplication-TileColor" content="#ffffff" />
 <meta name="theme-color" content="#de3f53" />
-<link rel="stylesheet" href={Astro.resolve("../styles/core.css")} />
+
+<style global>
+  @import "../styles/core.css";
+</style>

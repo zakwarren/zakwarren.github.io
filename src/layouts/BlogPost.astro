@@ -1,7 +1,6 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import BaseHead from "../components/BaseHead.astro";
-import BlogHeader from "../components/BlogHeader.astro";
-import BlogPost from "../components/BlogPost.astro";
 
 export interface Props {
   content: {
@@ -21,13 +20,24 @@ const { title, description, heading, category, publishDate } = content;
 <html lang="en">
   <head>
     <BaseHead {title} {description} />
-    <link rel="stylesheet" href={Astro.resolve("../styles/blog.css")} />
+    <style global>
+      @import "../styles/blog.css";
+    </style>
   </head>
 
   <body>
-    <BlogHeader {heading} {category} {publishDate} />
-    <BlogPost>
-      <slot />
-    </BlogPost>
+    <header class="blog-header">
+      <Navigation />
+      <img class="blog-banner" src="/assets/blog-banner.jpg" alt="blog banner"
+      />
+      <h1 class="blog-heading">{heading}</h1>
+      <span class="blog-category">{category}</span>
+      <time class="blog-date">{publishDate}</time>
+    </header>
+    <article class="blog-content">
+      <main>
+        <slot />
+      </main>
+    </article>
   </body>
 </html>

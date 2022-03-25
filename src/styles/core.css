@@ -4,6 +4,9 @@
   --highlight: #ffd300;
   --success: #03cea4;
   --grey: #9999a1;
+  --grey-light: #f1f1f1;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 * {
