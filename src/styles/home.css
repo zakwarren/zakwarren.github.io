@@ -62,7 +62,9 @@
 }
 
 .container {
+  margin: auto;
   padding: 8rem 1rem;
+  width: clamp(60%, 75%, 100%);
 }
 
 .container-grey {
@@ -76,6 +78,7 @@
 }
 
 .col-50 {
+  margin: 0.2rem;
   width: 100%;
 }
 
@@ -106,7 +109,8 @@
 .card {
   margin: 0.2rem;
   padding: 0.1rem 1rem;
-  min-width: 20rem;
+  width: 20%;
+  min-width: 10rem;
   height: 10rem;
   background-color: var(--white);
   border-radius: 0.25rem;
