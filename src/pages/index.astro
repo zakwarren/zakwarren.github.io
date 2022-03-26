@@ -75,49 +75,51 @@ const devSkills = [
       </p>
     </div>
 
-    <div class="container container-grey" id="scalable">
-      <span class="heading">
-        <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faUserNinja} />
-        <h2>More experience than you can shake a stick at</h2>
-      </span>
-      <p>
-        I've had the privilege to work in a range of companies in varied
-        industries. I've created outstanding software aimed at wildly different
-        audiences, from a single user to millions of concurrent users.
-      </p>
-      <p>
-        Throughout the numerous projects I've worked on, I've gained experience
-        in designing and implementing a wide variety of different architectures.
-        I embrace building modular components that are reusable, extensible, and
-        easy to test.
-      </p>
-      <p>
-        Often the most difficult question to answer is "What do you want to see
-        and do?". So throughout development I work with users to figure out what
-        they need, demonstrating and eliciting feedback regularly.
-      </p>
-      <p>This is how I create software that is scalable, secure, and robust.</p>
-      <div class="card-row">
-          <div class="card">
-            <p class="text-big">Responsive</p>
-            <FontAwesomeIcon
-              class="icon icon-md"
-              fixedWidth
-              icon={faMobileScreenButton}
-            />
-          </div>
-          <div class="card">
-            <p class="text-big">Performant</p>
-            <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faDesktop} />
-          </div>
-          <div class="card">
-            <p class="text-big">Scalable</p>
-            <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faCloud} />
-          </div>
-          <div class="card">
-            <p class="text-big">Secure</p>
-            <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faServer} />
-          </div>
+    <div class="container-grey">
+      <div class="container" id="scalable">
+        <span class="heading">
+          <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faUserNinja} />
+          <h2>More experience than you can shake a stick at</h2>
+        </span>
+        <p>
+          I've had the privilege to work in a range of companies in varied
+          industries. I've created outstanding software aimed at wildly different
+          audiences, from a single user to millions of concurrent users.
+        </p>
+        <p>
+          Throughout the numerous projects I've worked on, I've gained experience
+          in designing and implementing a wide variety of different architectures.
+          I embrace building modular components that are reusable, extensible, and
+          easy to test.
+        </p>
+        <p>
+          Often the most difficult question to answer is "What do you want to see
+          and do?". So throughout development I work with users to figure out what
+          they need, demonstrating and eliciting feedback regularly.
+        </p>
+        <p>This is how I create software that is scalable, secure, and robust.</p>
+        <div class="card-row">
+            <div class="card">
+              <p class="text-big">Responsive</p>
+              <FontAwesomeIcon
+                class="icon icon-md"
+                fixedWidth
+                icon={faMobileScreenButton}
+              />
+            </div>
+            <div class="card">
+              <p class="text-big">Performant</p>
+              <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faDesktop} />
+            </div>
+            <div class="card">
+              <p class="text-big">Scalable</p>
+              <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faCloud} />
+            </div>
+            <div class="card">
+              <p class="text-big">Secure</p>
+              <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faServer} />
+            </div>
+        </div>
       </div>
     </div>
 
@@ -138,31 +140,33 @@ const devSkills = [
       </p>
     </div>
 
-    <div class="container container-grey container-cols" id="skills">
-      <div class="col-50">
-        <span class="heading">
-          <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faUserPlus} />
-          <h2>Skills</h2>
-        </span>
-        <p>
-          I'm a highly skilled and experienced full stack software developer.
-          I'm a quick and efficient learner, and a firm believer in using the
-          best tool for the job. During my career I've made use of a variety
-          of technologies, based on business need, project requirements, what
-          my colleagues have skills in, and what is available at the time.
-        </p>
-      </div>
-      <div class="col-50">
-      {devSkills.map((skill) => (
-        <div class="bar-outer">
-          <div
-            class="bar-inner"
-            style={`width:${skill.bar}`}
-          >
-            {skill.name}
-          </div>
+    <div class="container-grey">
+      <div class="container container-cols" id="skills">
+        <div class="col-50">
+          <span class="heading">
+            <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faUserPlus} />
+            <h2>Skills</h2>
+          </span>
+          <p>
+            I'm a highly skilled and experienced full stack software developer.
+            I'm a quick and efficient learner, and a firm believer in using the
+            best tool for the job. During my career I've made use of a variety
+            of technologies, based on business need, project requirements, what
+            my colleagues have skills in, and what is available at the time.
+          </p>
         </div>
-      ))}
+        <div class="col-50">
+        {devSkills.map((skill) => (
+          <div class="bar-outer">
+            <div
+              class="bar-inner"
+              style={`width:${skill.bar}`}
+            >
+              {skill.name}
+            </div>
+          </div>
+        ))}
+        </div>
       </div>
     </div>
 
