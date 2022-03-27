@@ -1,0 +1,8 @@
+/* TEAM */
+Zak Warren
+Title: Software Engineer Extraordinaire                 
+Location: United Kingdom
+       
+/* SITE */
+Languages: HTML, CSS
+Tools: Astro, Github, VS Code
