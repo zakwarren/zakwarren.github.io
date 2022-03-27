@@ -15,9 +15,6 @@
   },
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.5.0",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.0.0-beta3",
-    "@fortawesome/react-fontawesome": "^0.1.16",
     "astro": "^0.24.3",
     "prettier-plugin-astro": "^0.0.12"
   },

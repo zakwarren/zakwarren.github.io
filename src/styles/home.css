@@ -44,9 +44,11 @@
 
 .icon {
   margin: 0 1rem;
+  min-width: 3rem;
   max-width: 3rem;
   border-radius: 0.2rem;
   transition: all ease 1s;
+  fill: var(--primary);
 }
 
 .icon::before {
@@ -54,10 +56,12 @@
 }
 
 .icon-md {
+  min-width: clamp(2rem, 2.5rem, 5rem);
   max-width: clamp(2rem, 2.5rem, 5rem);
 }
 
 .icon-sm {
+  min-width: 1rem;
   max-width: clamp(1rem, 2rem, 3rem);
 }
 
@@ -96,6 +100,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .card-row {
@@ -116,6 +121,8 @@
   border-radius: 0.25rem;
   box-shadow: 0 0.1rem 0.3rem 0 rgb(0 0 0 / 16%),
     0 0.1rem 0.6rem 0 rgb(0 0 0 / 12%);
+  display: flex;
+  flex-direction: column;
 }
 
 .text-big {

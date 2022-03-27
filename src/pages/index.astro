@@ -1,18 +1,15 @@
 ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDesktop,
-  faMobileScreenButton,
-  faCloud,
-  faServer,
-  faUserNinja,
-  faUserAstronaut,
-  faUserGraduate,
-  faUserPlus,
-} from "@fortawesome/free-solid-svg-icons";
-
 import BaseHead from "../components/BaseHead.astro";
 import Hero from "../components/Hero.astro";
+
+import IconDesktop from "../components/icons/desktop.astro";
+import IconMobile from "../components/icons/mobile.astro";
+import IconServer from "../components/icons/server.astro";
+import IconSitemap from "../components/icons/sitemap.astro";
+import IconUserAstronaut from "../components/icons/user-astronaut.astro";
+import IconUserGraduate from "../components/icons/user-graduate.astro";
+import IconUserNinja from "../components/icons/user-ninja.astro";
+import IconUserPlus from "../components/icons/user-plus.astro";
 
 const title = "Zak Warren";
 const description =
@@ -37,7 +34,6 @@ const devSkills = [
     <style>
       @import "../styles/home.css";
     </style>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <body id="home">
     <Hero>
@@ -56,7 +52,9 @@ const devSkills = [
       id="leader"
     >
       <span class="heading">
-        <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faUserAstronaut} />
+        <span class="icon icon-md">
+          <IconUserAstronaut />
+        </span>
         <h2>Creating the path</h2>
       </span>
       <p>
@@ -78,7 +76,9 @@ const devSkills = [
     <div class="container-grey">
       <div class="container" id="scalable">
         <span class="heading">
-          <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faUserNinja} />
+          <span class="icon icon-md">
+            <IconUserNinja />
+          </span>
           <h2>More experience than you can shake a stick at</h2>
         </span>
         <p>
@@ -97,27 +97,31 @@ const devSkills = [
           and do?". So throughout development I work with users to figure out what
           they need, demonstrating and eliciting feedback regularly.
         </p>
-        <p>This is how I create software that is scalable, secure, and robust.</p>
+        <p>This is how I create software.</p>
         <div class="card-row">
             <div class="card">
               <p class="text-big">Responsive</p>
-              <FontAwesomeIcon
-                class="icon icon-md"
-                fixedWidth
-                icon={faMobileScreenButton}
-              />
+              <span class="icon icon-md">
+                <IconMobile />
+              </span>
             </div>
             <div class="card">
               <p class="text-big">Performant</p>
-              <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faDesktop} />
+              <span class="icon icon-md">
+                <IconDesktop />
+              </span>
             </div>
             <div class="card">
               <p class="text-big">Scalable</p>
-              <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faCloud} />
+              <span class="icon icon-md">
+                <IconSitemap />
+              </span>
             </div>
             <div class="card">
               <p class="text-big">Secure</p>
-              <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faServer} />
+              <span class="icon icon-md">
+                <IconServer />
+              </span>
             </div>
         </div>
       </div>
@@ -125,7 +129,9 @@ const devSkills = [
 
     <div class="container" id="mentor">
       <span class="heading">
-        <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faUserGraduate} />
+        <span class="icon icon-md">
+          <IconUserGraduate />
+        </span>
         <h2>Passing it forwards</h2>
       </span>
       <p>
@@ -144,7 +150,9 @@ const devSkills = [
       <div class="container container-cols" id="skills">
         <div class="col-50">
           <span class="heading">
-            <FontAwesomeIcon class="icon icon-md" fixedWidth icon={faUserPlus} />
+            <span class="icon icon-md">
+              <IconUserPlus />
+            </span>
             <h2>Skills</h2>
           </span>
           <p>
