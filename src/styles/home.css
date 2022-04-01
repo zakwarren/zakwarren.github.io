@@ -67,7 +67,7 @@
 
 .container {
   margin: auto;
-  padding: 8rem 1rem;
+  padding: 1rem;
   width: clamp(60%, 75%, 100%);
 }
 

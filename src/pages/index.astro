@@ -10,21 +10,11 @@ import IconUserAstronaut from "../components/icons/user-astronaut.astro";
 import IconUserGraduate from "../components/icons/user-graduate.astro";
 import IconUserNinja from "../components/icons/user-ninja.astro";
 import IconUserPlus from "../components/icons/user-plus.astro";
+import Skills from "../components/Skills.tsx";
 
 const title = "Zak Warren";
 const description =
   "Zak Warren, Software Engineer Extraordinaire, creates amazing applications.";
-const devSkills = [
-  { name: "JavaScript", bar: "90%" },
-  { name: "TypeScript", bar: "40%" },
-  { name: "CSS", bar: "90%" },
-  { name: "React", bar: "70%" },
-  { name: "Node", bar: "70%" },
-  { name: "PWAs", bar: "50%" },
-  { name: "SQL Server", bar: "80%" },
-  { name: "Mongo DB", bar: "60%" },
-  { name: "Docker & K8s", bar: "40%" },
-];
 ---
 
 <!DOCTYPE html>
@@ -47,10 +37,7 @@ const devSkills = [
       </div>
     </Hero>
 
-    <div
-      class="container"
-      id="leader"
-    >
+    <div class="container" id="leader">
       <span class="heading">
         <span class="icon icon-md">
           <IconUserAstronaut />
@@ -64,12 +51,10 @@ const devSkills = [
       </p>
       <p>
         I encourage conversations in my team, listening to all ideas, taking
-        advice, and having open discussions about the way forward.
-      </p>
-      <p>
-        All the teams that I have led have increased the speed, quality, and
-        ambition of their work. This is all while feeling positive and that
-        their work makes a real difference.
+        advice, and having open discussions about the way forward. All of the
+        teams that I have led have increased the speed, quality, and ambition of
+        their work. This is all while feeling positive and that their work makes
+        a real difference.
       </p>
     </div>
 
@@ -83,46 +68,44 @@ const devSkills = [
         </span>
         <p>
           I've had the privilege to work in a range of companies in varied
-          industries. I've created outstanding software aimed at wildly different
-          audiences, from a single user to millions of concurrent users.
+          industries. I've created outstanding software aimed at wildly
+          different audiences, from a single user to millions of concurrent
+          users. Throughout the numerous projects I've worked on, I've gained
+          experience in designing and implementing a wide variety of different
+          architectures. I embrace building modular components that are
+          reusable, extensible, and easy to test.
         </p>
         <p>
-          Throughout the numerous projects I've worked on, I've gained experience
-          in designing and implementing a wide variety of different architectures.
-          I embrace building modular components that are reusable, extensible, and
-          easy to test.
+          Often the most difficult question to answer is "What do you want to
+          see and do?". So throughout development I work closely with users to
+          figure out what they need, demonstrating current work and eliciting
+          feedback regularly.
         </p>
-        <p>
-          Often the most difficult question to answer is "What do you want to see
-          and do?". So throughout development I work with users to figure out what
-          they need, demonstrating and eliciting feedback regularly.
-        </p>
-        <p>This is how I create software.</p>
         <div class="card-row">
-            <div class="card">
-              <p class="text-big">Responsive</p>
-              <span class="icon icon-md">
-                <IconMobile />
-              </span>
-            </div>
-            <div class="card">
-              <p class="text-big">Performant</p>
-              <span class="icon icon-md">
-                <IconDesktop />
-              </span>
-            </div>
-            <div class="card">
-              <p class="text-big">Scalable</p>
-              <span class="icon icon-md">
-                <IconSitemap />
-              </span>
-            </div>
-            <div class="card">
-              <p class="text-big">Secure</p>
-              <span class="icon icon-md">
-                <IconServer />
-              </span>
-            </div>
+          <div class="card">
+            <p class="text-big">Responsive</p>
+            <span class="icon icon-md">
+              <IconMobile />
+            </span>
+          </div>
+          <div class="card">
+            <p class="text-big">Performant</p>
+            <span class="icon icon-md">
+              <IconDesktop />
+            </span>
+          </div>
+          <div class="card">
+            <p class="text-big">Scalable</p>
+            <span class="icon icon-md">
+              <IconSitemap />
+            </span>
+          </div>
+          <div class="card">
+            <p class="text-big">Secure</p>
+            <span class="icon icon-md">
+              <IconServer />
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -135,8 +118,8 @@ const devSkills = [
         <h2>Passing it forwards</h2>
       </span>
       <p>
-        At the start of my career I had some great mentors. As I've developed
-        my skills and knowledge I have continued this tradition of passing it
+        At the start of my career I had some great mentors. As I've developed my
+        skills and knowledge I have continued this tradition of passing it
         forwards.
       </p>
       <p>
@@ -164,16 +147,7 @@ const devSkills = [
           </p>
         </div>
         <div class="col-50">
-        {devSkills.map((skill) => (
-          <div class="bar-outer">
-            <div
-              class="bar-inner"
-              style={`width:${skill.bar}`}
-            >
-              {skill.name}
-            </div>
-          </div>
-        ))}
+          <Skills client:only />
         </div>
       </div>
     </div>

@@ -7,7 +7,12 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
 // @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
-  // Enable the Preact renderer to support Preact JSX components.
-  renderers: ["@astrojs/renderer-preact"],
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+
+export default defineConfig({
+  integrations: [react()],
+  buildOptions: {
+    site: "https://zakwarren.github.io/",
+  },
 });
