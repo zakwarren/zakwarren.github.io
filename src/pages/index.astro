@@ -2,14 +2,11 @@
 import BaseHead from "../components/BaseHead.astro";
 import Hero from "../components/Hero.astro";
 
-import IconDesktop from "../components/icons/desktop.astro";
-import IconMobile from "../components/icons/mobile.astro";
-import IconServer from "../components/icons/server.astro";
-import IconSitemap from "../components/icons/sitemap.astro";
 import IconUserAstronaut from "../components/icons/user-astronaut.astro";
 import IconUserGraduate from "../components/icons/user-graduate.astro";
 import IconUserNinja from "../components/icons/user-ninja.astro";
 import IconUserPlus from "../components/icons/user-plus.astro";
+import IconUserEngineer from "../components/icons/user-engineer.astro";
 import Skills from "../components/Skills.tsx";
 
 const title = "Zak Warren";
@@ -81,74 +78,107 @@ const description =
           figure out what they need, demonstrating current work and eliciting
           feedback regularly.
         </p>
-        <div class="card-row">
-          <div class="card">
-            <p class="text-big">Responsive</p>
-            <span class="icon icon-md">
-              <IconMobile />
-            </span>
-          </div>
-          <div class="card">
-            <p class="text-big">Performant</p>
-            <span class="icon icon-md">
-              <IconDesktop />
-            </span>
-          </div>
-          <div class="card">
-            <p class="text-big">Scalable</p>
-            <span class="icon icon-md">
-              <IconSitemap />
-            </span>
-          </div>
-          <div class="card">
-            <p class="text-big">Secure</p>
-            <span class="icon icon-md">
-              <IconServer />
-            </span>
-          </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <span class="heading">
+        <span class="icon icon-md">
+          <IconUserEngineer />
+        </span>
+        <h2>Examples of projects</h2>
+      </span>
+      <div class="gallery-row">
+        <div class="gallery-column">
+          <figure class="gallery-card">
+            <figcaption>Home Management PWA</figcaption>
+            <img src="/assets/projects/homeapp.jpg" />
+          </figure>
+          <figure class="gallery-card">
+            <figcaption>Tools for Adventurers</figcaption>
+            <img src="/assets/projects/kitlist.jpg" />
+          </figure>
+        </div>
+        <div class="gallery-column">
+          <figure class="gallery-card">
+            <figcaption>Twitter Bot</figcaption>
+            <img src="/assets/projects/moviegenerator.jpg" />
+          </figure>
+          <figure class="gallery-card">
+            <figcaption>Cashless Card System</figcaption>
+            <img src="/assets/projects/cashlesscards.jpg" />
+          </figure>
+          <figure class="gallery-card">
+            <figcaption>IT Helpdesk Simulator</figcaption>
+            <img src="/assets/projects/helpdesksimulator.jpg" />
+          </figure>
+        </div>
+        <div class="gallery-column">
+          <figure class="gallery-card">
+            <figcaption>Hygge App</figcaption>
+            <img src="/assets/projects/hygge.jpg" />
+          </figure>
+          <figure class="gallery-card">
+            <figcaption>E-Commerce Micro-Services App</figcaption>
+            <img src="/assets/projects/sellsellsell.jpg" />
+          </figure>
+        </div>
+        <div class="gallery-column">
+          <figure class="gallery-card">
+            <figcaption>Activities Club Website</figcaption>
+            <img src="/assets/projects/activitiesclub.jpg" />
+          </figure>
+          <figure class="gallery-card">
+            <figcaption>Word Analysis Tool</figcaption>
+            <img src="/assets/projects/verbosityanalysis.jpg" />
+          </figure>
+          <figure class="gallery-card">
+            <figcaption>Children's Mobile Game</figcaption>
+            <img src="/assets/projects/albieadventures.jpg" />
+          </figure>
         </div>
       </div>
     </div>
 
-    <div class="container" id="mentor">
-      <span class="heading">
-        <span class="icon icon-md">
-          <IconUserGraduate />
+    <div class="container-grey">
+      <div class="container" id="mentor">
+        <span class="heading">
+          <span class="icon icon-md">
+            <IconUserGraduate />
+          </span>
+          <h2>Passing it forwards</h2>
         </span>
-        <h2>Passing it forwards</h2>
-      </span>
-      <p>
-        At the start of my career I had some great mentors. As I've developed my
-        skills and knowledge I have continued this tradition of passing it
-        forwards.
-      </p>
-      <p>
-        I've worked with many students, graduates, and junior developers as a
-        mentor or coach. It has been a great honour to help and guide them as
-        they've made their first steps in their journey in creating software.
-      </p>
+        <p>
+          At the start of my career I had some great mentors. As I've developed
+          my skills and knowledge I have continued this tradition of passing it
+          forwards.
+        </p>
+        <p>
+          I've worked with many students, graduates, and junior developers as a
+          mentor or coach. It has been a great honour to help and guide them as
+          they've made their first steps in their journey in creating software.
+        </p>
+      </div>
     </div>
 
-    <div class="container-grey">
-      <div class="container container-cols" id="skills">
-        <div class="col-50">
-          <span class="heading">
-            <span class="icon icon-md">
-              <IconUserPlus />
-            </span>
-            <h2>Skills</h2>
+    <div class="container container-cols" id="skills">
+      <div class="col-50">
+        <span class="heading">
+          <span class="icon icon-md">
+            <IconUserPlus />
           </span>
-          <p>
-            I'm a highly skilled and experienced full stack software developer.
-            I'm a quick and efficient learner, and a firm believer in using the
-            best tool for the job. During my career I've made use of a variety
-            of technologies, based on business need, project requirements, what
-            my colleagues have skills in, and what is available at the time.
-          </p>
-        </div>
-        <div class="col-50">
-          <Skills client:only />
-        </div>
+          <h2>Skills</h2>
+        </span>
+        <p>
+          I'm a highly skilled and experienced full stack software developer.
+          I'm a quick and efficient learner, and a firm believer in using the
+          best tool for the job. During my career I've made use of a variety of
+          technologies, based on business need, project requirements, what my
+          colleagues have skills in, and what is available at the time.
+        </p>
+      </div>
+      <div class="col-50">
+        <Skills client:only />
       </div>
     </div>
 
