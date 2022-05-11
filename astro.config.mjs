@@ -12,7 +12,5 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   integrations: [react()],
-  buildOptions: {
-    site: "https://zakwarren.github.io/",
-  },
+  site: "https://zakwarren.github.io/",
 });

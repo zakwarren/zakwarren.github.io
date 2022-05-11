@@ -1,4 +1,4 @@
-import WordCloud from "react-d3-cloud";
+// import WordCloud from "react-d3-cloud";
 
 interface Skill {
   text: string;
@@ -29,14 +29,15 @@ const fontSize = (skill: Skill) => skill.value;
 const rotate = (skill: Skill) => (skill.value % 90) - 45;
 
 const Skills = () => (
-  <WordCloud
-    data={devSkills}
-    width={750}
-    height={500}
-    fontSize={fontSize}
-    rotate={rotate}
-    padding={2}
-  />
+  // <WordCloud
+  //   data={devSkills}
+  //   width={750}
+  //   height={500}
+  //   fontSize={fontSize}
+  //   rotate={rotate}
+  //   padding={2}
+  // />
+  <p>Hey</p>
 );
 
 export default Skills;

@@ -1,13 +1,13 @@
 ---
+import { BsMouse } from "react-icons/bs";
+
 import BaseHead from "../components/BaseHead.astro";
 import Hero from "../components/Hero.astro";
-
-import IconUserAstronaut from "../components/icons/user-astronaut.astro";
-import IconUserGraduate from "../components/icons/user-graduate.astro";
-import IconUserNinja from "../components/icons/user-ninja.astro";
-import IconUserPlus from "../components/icons/user-plus.astro";
-import IconUserEngineer from "../components/icons/user-engineer.astro";
-import Skills from "../components/Skills.tsx";
+import Navbar from "../components/home/nav/nav.jsx";
+import ScrollDown from "../components/ScrollDown.astro";
+import About from "../components/home/about/about.astro";
+import Leadership from "../components/home/leadership/leadership.jsx";
+import Projects from "../components/home/projects/projects.astro";
 
 const title = "Zak Warren";
 const description =
@@ -29,161 +29,17 @@ const description =
         <h3>Zak Warren</h3>
         <p>I create smarter software that makes people's lives better.</p>
       </div>
-      <div class="hero-secondary">
-        <p>Stand out in a sea of ordinary.</p>
-      </div>
+      <ScrollDown href="#footer" />
     </Hero>
-
-    <div class="container" id="leader">
-      <span class="heading">
-        <span class="icon icon-md">
-          <IconUserAstronaut />
-        </span>
-        <h2>Creating the path</h2>
-      </span>
-      <p>
-        The way we organise ourselves is just as important as the way we
-        organise our systems and our code. When leading I've found that small,
-        highly collaborative teams are the most effective.
-      </p>
-      <p>
-        I encourage conversations in my team, listening to all ideas, taking
-        advice, and having open discussions about the way forward. All of the
-        teams that I have led have increased the speed, quality, and ambition of
-        their work. This is all while feeling positive and that their work makes
-        a real difference.
-      </p>
+    <Navbar />
+    <About />
+    <Leadership />
+    <Projects />
+    <div id="footer" class="container footer-container">
+      <h5 class="footer-caption">Made with ❤</h5>
+      <a href="#home">
+        <BsMouse /> - scroll up -
+      </a>
     </div>
-
-    <div class="container-grey">
-      <div class="container" id="scalable">
-        <span class="heading">
-          <span class="icon icon-md">
-            <IconUserNinja />
-          </span>
-          <h2>More experience than you can shake a stick at</h2>
-        </span>
-        <p>
-          I've had the privilege to work in a range of companies in varied
-          industries. I've created outstanding software aimed at wildly
-          different audiences, from a single user to millions of concurrent
-          users. Throughout the numerous projects I've worked on, I've gained
-          experience in designing and implementing a wide variety of different
-          architectures. I embrace building modular components that are
-          reusable, extensible, and easy to test.
-        </p>
-        <p>
-          Often the most difficult question to answer is "What do you want to
-          see and do?". So throughout development I work closely with users to
-          figure out what they need, demonstrating current work and eliciting
-          feedback regularly.
-        </p>
-      </div>
-    </div>
-
-    <div class="container">
-      <span class="heading">
-        <span class="icon icon-md">
-          <IconUserEngineer />
-        </span>
-        <h2>Examples of projects</h2>
-      </span>
-      <div class="gallery-row">
-        <div class="gallery-column">
-          <figure class="gallery-card">
-            <figcaption>Home Management PWA</figcaption>
-            <img src="/assets/projects/homeapp.jpg" />
-          </figure>
-          <figure class="gallery-card">
-            <figcaption>Tools for Adventurers</figcaption>
-            <img src="/assets/projects/kitlist.jpg" />
-          </figure>
-        </div>
-        <div class="gallery-column">
-          <figure class="gallery-card">
-            <figcaption>Twitter Bot</figcaption>
-            <img src="/assets/projects/moviegenerator.jpg" />
-          </figure>
-          <figure class="gallery-card">
-            <figcaption>Cashless Card System</figcaption>
-            <img src="/assets/projects/cashlesscards.jpg" />
-          </figure>
-          <figure class="gallery-card">
-            <figcaption>IT Helpdesk Simulator</figcaption>
-            <img src="/assets/projects/helpdesksimulator.jpg" />
-          </figure>
-        </div>
-        <div class="gallery-column">
-          <figure class="gallery-card">
-            <figcaption>Hygge App</figcaption>
-            <img src="/assets/projects/hygge.jpg" />
-          </figure>
-          <figure class="gallery-card">
-            <figcaption>E-Commerce Micro-Services App</figcaption>
-            <img src="/assets/projects/sellsellsell.jpg" />
-          </figure>
-        </div>
-        <div class="gallery-column">
-          <figure class="gallery-card">
-            <figcaption>Activities Club Website</figcaption>
-            <img src="/assets/projects/activitiesclub.jpg" />
-          </figure>
-          <figure class="gallery-card">
-            <figcaption>Word Analysis Tool</figcaption>
-            <img src="/assets/projects/verbosityanalysis.jpg" />
-          </figure>
-          <figure class="gallery-card">
-            <figcaption>Children's Mobile Game</figcaption>
-            <img src="/assets/projects/albieadventures.jpg" />
-          </figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-grey">
-      <div class="container" id="mentor">
-        <span class="heading">
-          <span class="icon icon-md">
-            <IconUserGraduate />
-          </span>
-          <h2>Passing it forwards</h2>
-        </span>
-        <p>
-          At the start of my career I had some great mentors. As I've developed
-          my skills and knowledge I have continued this tradition of passing it
-          forwards.
-        </p>
-        <p>
-          I've worked with many students, graduates, and junior developers as a
-          mentor or coach. It has been a great honour to help and guide them as
-          they've made their first steps in their journey in creating software.
-        </p>
-      </div>
-    </div>
-
-    <div class="container container-cols" id="skills">
-      <div class="col-50">
-        <span class="heading">
-          <span class="icon icon-md">
-            <IconUserPlus />
-          </span>
-          <h2>Skills</h2>
-        </span>
-        <p>
-          I'm a highly skilled and experienced full stack software developer.
-          I'm a quick and efficient learner, and a firm believer in using the
-          best tool for the job. During my career I've made use of a variety of
-          technologies, based on business need, project requirements, what my
-          colleagues have skills in, and what is available at the time.
-        </p>
-      </div>
-      <div class="col-50">
-        <Skills client:only />
-      </div>
-    </div>
-
-    <footer class="footer">
-      <a href="#home" class="button">Back to the top</a>
-    </footer>
   </body>
 </html>
