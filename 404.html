@@ -1,47 +1,85 @@
-<!DOCTYPE html><html lang="en" class="astro-GM2CIHEB">
+<!DOCTYPE html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
-    <!-- Global Metadata --><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link type="text/plain" rel="author" href="/humans.txt">
-<link rel="manifest" href="/manifest.json">
+  <!-- Global Metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/plain" rel="author" href="/humans.txt">
+  <link rel="manifest" href="/manifest.json">
 
-<!-- Primary Meta Tags -->
-<title>Oops!</title>
-<meta name="title" content="Oops!">
-<meta name="description" content="You're lost! Let me help you get back on track.">
+  <!-- Primary Meta Tags -->
+  <title>Zak Warren</title>
+  <meta name="title" content="Zak Warren">
+  <meta name="description" content="The personal website of Zak Warren, Software Engineer Extraordinaire">
 
-<!-- Icons -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<!-- Theme -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#de3f53">
+  <!-- Theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#de3f53">
 
+  <meta name="generator" content="Astro v1.6.11">
 
+  <!-- initialize theme -->
+  <script>
+    const themeSaved = localStorage.getItem("theme");
 
-    
-  <link rel="stylesheet" href="/assets/asset.9c586f6a.css"></link>
-</head>
+    if (themeSaved) {
+      document.documentElement.dataset.theme = themeSaved;
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+    }
 
-  <body>
-    <section class="hero astro-GK7RUMDI">
-  <nav class="astro-MASE5SZA"><a href="/" class="astro-MASE5SZA">Home</a><a href="/blog" class="astro-MASE5SZA">Blog</a></nav>
-
-
-<div class="hero-404 astro-GM2CIHEB">
-        <h1 class="astro-GM2CIHEB">Oops!</h1>
-        <p class="astro-GM2CIHEB">The page you're looking for isn't here or doesn't exist.</p>
-        <a href="/" class="astro-GM2CIHEB">Go back to the homepage</a>
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        if (!localStorage.getItem("theme")) {
+          document.documentElement.dataset.theme = event.matches
+            ? "dark"
+            : "light";
+        }
+      });
+  </script>
+<link rel="stylesheet" href="/assets/404.214e6810.css" /></head>
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+    <header id="page-header" class="absolute top-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white">
+      <a class="flex items-center gap-3 hover:!text-default" href="#">
+        <svg viewBox="0 0 448 512" class="h-10 fill-primary" astro-icon="astronaut"><path d="M176 448c-8.7 0-16 7.3-16 16v48h32v-48c0-8.7-7.2-16-16-16zm96 0c-8.75 0-16 7.25-16 16s7.25 16 16 16 16-7.25 16-16-7.2-16-16-16zM164 172l8.205 24.62c1.215 3.645 6.375 3.645 7.59 0L188 172l24.62-8.203c3.646-1.219 3.646-6.375 0-7.594L188 148l-8.2-24.6c-1.215-3.648-6.375-3.648-7.59 0L164 148l-24.6 8.2c-3.646 1.219-3.646 6.375 0 7.594L164 172zm172.1 143.4C304 338.6 265.1 352 224 352s-80.03-13.43-112.1-36.59C46.55 340.2 0 403.3 0 477.3 0 496.5 15.52 512 34.66 512H128v-64c0-17.75 14.25-32 32-32h128c17.75 0 32 14.25 32 32v64h93.34c19.16 0 34.66-15.5 34.66-34.7 0-74-46.5-137.1-111.9-161.9zM64 224h13.5c24.8 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.75 0 16-7.25 16-16v-96c0-8.7-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.3 39.5 77.5 96H64c-8.75 0-16 7.3-16 16v96c0 8.8 7.25 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.88 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24z"/></svg>
+        <h1 class="hidden h-4 sm:block">Zak Warren</h1>
+      </a>
+    </header>
+    <section class="relative h-full bg-black">
+      <div id="splash-bg" class="absolute inset-0 opacity-40">
+        <picture>
+	<source type="image/avif" srcset="/assets/space-background.5667da0b_ZzytFy.avif 450w,/assets/space-background.5667da0b_Z2aeSHP.avif 800w,/assets/space-background.5667da0b_FO6o5.avif 1200w" sizes="100vw"><source type="image/webp" srcset="/assets/space-background.5667da0b_8Lkhd.webp 450w,/assets/space-background.5667da0b_Z1qT4K4.webp 800w,/assets/space-background.5667da0b_1p9UlQ.webp 1200w" sizes="100vw"><source type="image/png" srcset="/assets/space-background.5667da0b_XRk9J.png 450w,/assets/space-background.5667da0b_Z1wkLRQ.png 800w,/assets/space-background.5667da0b_ZhFw6V.png 1200w" sizes="100vw">
+	<img src="/assets/space-background.5667da0b_ZhFw6V.png" loading="lazy" decoding="async" alt="The ridged surface of the moon" class="object-cover w-full h-full">
+</picture>
       </div>
-</section>
-
-
-
+      <div class="relative grid h-full place-items-center sm:grid-cols-2">
+        <h2 class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end">
+         <div class="text-left font-extrabold tracking-tighter text-white text-6xl">
+            Oops!
+          </div>
+          <p class="text-left tracking-tighter text-white">The page you're looking for isn't here or doesn't exist.</p>
+          <a href="/" class="text-left tracking-tighter text-primary underline">Go back to the homepage</a>
+        </h2>
+        <div id="astronaut" class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start">
+          <picture>
+	<source type="image/avif" srcset="/assets/astronaut.454e7380_ZMaHb7.avif 450w,/assets/astronaut.454e7380_Z2s1sB3.avif 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/webp" srcset="/assets/astronaut.454e7380_Z3OSdl.webp 450w,/assets/astronaut.454e7380_Z1IFDDh.webp 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/png" srcset="/assets/astronaut.454e7380_DrIIS.png 450w,/assets/astronaut.454e7380_KaHvS.png 800w" sizes="(min-width: 640px) 42vw, 67vw">
+	<img src="/assets/astronaut.454e7380_KaHvS.png" loading="eager" decoding="async" alt="A floating astronaut in a space suit" class="object-cover w-full h-full">
+</picture>
+        </div>
+      </div>
+    </section>
   </body></html>
