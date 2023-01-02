@@ -1,45 +1,24 @@
 ---
-import { BsMouse } from "react-icons/bs";
-
-import BaseHead from "../components/BaseHead.astro";
-import Hero from "../components/Hero.astro";
-import Navbar from "../components/home/nav/nav.jsx";
-import ScrollDown from "../components/ScrollDown.astro";
-import About from "../components/home/about/about.astro";
-import Leadership from "../components/home/leadership/leadership.jsx";
-import Projects from "../components/home/projects/projects.astro";
-
-const title = "Zak Warren";
-const description =
-  "Zak Warren, Software Engineer Extraordinaire, creates amazing applications.";
+import DocumentHead from "~/components/doc-head.astro"
+import Skills from "~/components/skills.astro";
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+import Showcase from "~/components/showcase.astro";
+import Splash from "~/components/splash.astro";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead {title} {description} />
-    <style>
-      @import "../styles/home.css";
-    </style>
-  </head>
-  <body id="home">
-    <Hero>
-      <div class="hero-primary">
-        <h1>Software Engineer Extraordinaire</h1>
-        <h3>Zak Warren</h3>
-        <p>I create smarter software that makes people's lives better.</p>
-      </div>
-      <ScrollDown href="#footer" />
-    </Hero>
-    <Navbar />
-    <About />
-    <Leadership />
-    <Projects />
-    <div id="footer" class="container footer-container">
-      <h5 class="footer-caption">Made with ❤</h5>
-      <a href="#home">
-        <BsMouse /> - scroll up -
-      </a>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <DocumentHead />
+  <body
+    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+  >
+    <Header />
+    <Splash />
+    <div class="space-y-24 px-8 py-32">
+      <Skills />
+      <Showcase />
     </div>
+    <Footer />
   </body>
 </html>

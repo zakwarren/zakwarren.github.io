@@ -1,72 +1,59 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Hero from "../components/Hero.astro";
-import Navigation from "../components/Navigation.astro";
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import DocumentHead from "~/components/doc-head.astro";
+import astronautImage from "~/assets/astronaut.png";
+import HeroImage from "~/components/hero-image.astro";
 
-const title = "Oops!";
-const description = "You're lost! Let me help you get back on track.";
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead {title} {description} />
-    <style>
-      .hero-404 {
-        margin-left: 1rem;
-        font-size: 2rem;
-        color: white;
-      }
-
-      @media (min-width: 768px) {
-        .hero-404 {
-          position: absolute;
-          top: 10%;
-          left: 10%;
-        }
-      }
-
-      .hero-404 h1,
-      .hero-404 p {
-        margin: 0.1rem;
-        color: inherit;
-      }
-
-      .hero-404 h1 {
-        margin-top: 0;
-      }
-
-      .hero-404 p {
-        margin-bottom: 1rem;
-      }
-
-      .hero-404 a {
-        margin: 1rem 0;
-        padding: 0.25rem 0.5rem;
-        width: 5rem;
-        border: 0.1rem solid white;
-        border-radius: 0.25rem;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        transition: all ease 0.3s;
-      }
-
-      .hero-404 a:hover {
-        background-color: var(--highlight);
-        color: black;
-      }
-    </style>
-  </head>
-
-  <body>
-    <Hero>
-      <Navigation />
-      <div class="hero-404">
-        <h1>Oops!</h1>
-        <p>The page you're looking for isn't here or doesn't exist.</p>
-        <a href="/">Go back to the homepage</a>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <DocumentHead />
+  <body
+    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+  >
+    <header
+      id="page-header"
+      class="absolute top-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+    >
+      <a class="flex items-center gap-3 hover:!text-default" href="#">
+        <Icon name="astronaut" class="h-10 fill-primary" />
+        <h1 class="hidden h-4 sm:block">Zak Warren</h1>
+      </a>
+    </header>
+    <section class="relative h-full bg-black">
+      <div id="splash-bg" class="absolute inset-0 opacity-40">
+        <HeroImage />
       </div>
-    </Hero>
+      <div class="relative grid h-full place-items-center sm:grid-cols-2">
+        <h2
+          class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
+        >
+         <div
+            class="text-left font-extrabold tracking-tighter text-white text-6xl"
+          >
+            Oops!
+          </div>
+          <p class="text-left tracking-tighter text-white">The page you're looking for isn't here or doesn't exist.</p>
+          <a href="/" class="text-left tracking-tighter text-primary underline">Go back to the homepage</a>
+        </h2>
+        <div
+          id="astronaut"
+          class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
+        >
+          <Picture
+            class="object-cover w-full h-full"
+            src={astronautImage}
+            widths={widths}
+            sizes={sizes}
+            loading="eager"
+            alt="A floating astronaut in a space suit"
+          />
+        </div>
+      </div>
+    </section>
   </body>
 </html>

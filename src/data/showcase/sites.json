@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Home Management PWA",
+    "image": "./images/homeapp.jpg"
+  },
+  {
+    "title": "Tools for Adventurers",
+    "image": "./images/kitlist.jpg"
+  },
+  {
+    "title": "Twitter Bot",
+    "image": "./images/moviegenerator.jpg"
+  },
+  {
+    "title": "Cashless Card System",
+    "image": "./images/cashlesscards.jpg"
+  },
+  {
+    "title": "IT Helpdesk Simulator",
+    "image": "./images/helpdesksimulator.jpg"
+  },
+  {
+    "title": "Hygge App",
+    "image": "./images/hygge.jpg"
+  },
+  {
+    "title": "E-Commerce Micro-Services App",
+    "image": "./images/sellsellsell.jpg"
+  },
+  {
+    "title": "Activities Club Website",
+    "image": "./images/activitiesclub.jpg"
+  },
+  {
+    "title": "Word Analysis Tool",
+    "image": "./images/verbosityanalysis.jpg"
+  },
+  {
+    "title": "Children's Mobile Game",
+    "image": "./images/albieadventures.jpg"
+  }
+]
